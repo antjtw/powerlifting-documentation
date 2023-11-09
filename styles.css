@@ -135,6 +135,15 @@
     margin-bottom: 8px;
 }
 
+.link {
+    font-size: 19px;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 8px;
+}
+
 li {
     padding-bottom: 8px;
 }
