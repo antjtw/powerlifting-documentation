@@ -189,6 +189,21 @@ li {
 
 }
 
+.document-list {
+    margin-bottom: 40px;
+    margin-top: 0px;
+    padding-left: 0px;
+
+}
+
+.document-list-item {
+    padding-top: 20px;
+    border-top: 1px solid #b1b4b6; /* Add 'solid' or another border style here */
+    margin-top: 0px;
+    margin-bottom: 0;
+    list-style: none; /* Add this line to remove the bullet */
+}
+
 /* fonts and stuff */
 
 @font-face {
