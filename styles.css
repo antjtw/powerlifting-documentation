@@ -129,7 +129,7 @@
     font-weight: bold;
     margin-top: 0; /* Remove margin on top */
     padding-top: 0; /* Remove padding on top */
-    color: blue;
+    color: rgb(29, 112, 184);
     text-decoration: underline;
     padding-bottom: 12px;
     margin-bottom: 8px;
@@ -142,6 +142,17 @@
     font-weight: bold;
     text-decoration: underline;
     margin-bottom: 8px;
+    color: rgb(29, 112, 184);
+}
+
+.document-link {
+    font-size: 19px;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 12px;
+    color: rgb(29, 112, 184);
 }
 
 li {
