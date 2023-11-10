@@ -222,7 +222,7 @@ li {
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0.24px;
-    src: url('fonts/Inter-Light.ttf') format('truetype');
+    src: url('fonts/Inter-Regular.ttf') format('truetype');
 }
 
 @font-face {
