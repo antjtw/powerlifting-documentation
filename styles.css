@@ -163,12 +163,12 @@ li {
 @media screen and (max-width: 640px) {
     .grid-column-two-thirds {
         width: 100%;
-        padding: 0 16px; /* Remove padding on mobile for full width */
+        padding: 0 12px; /* Remove padding on mobile for full width */
     }
 
     .grid-column-one-third {
         width: 100%;
-        padding: 0 16px;
+        padding: 0 12px;
     }
 }
 
