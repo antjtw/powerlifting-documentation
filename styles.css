@@ -221,12 +221,14 @@ li {
     font-family: 'Inter';
     font-weight: 400;
     font-style: normal;
-    src: url('fonts/Inter-Regular.ttf') format('truetype');
+    letter-spacing: 0.24px;
+    src: url('fonts/Inter-Light.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Inter';
     font-weight: 700;
-    font-style: normal;
+    font-style: bold;
     src: url('fonts/Inter-Bold.ttf') format('truetype');
 }
+
