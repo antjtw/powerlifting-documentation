@@ -215,6 +215,38 @@ li {
     list-style: none; /* Add this line to remove the bullet */
 }
 
+.table-container {
+    overflow-x: auto;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 8px 8px 8px 8px;
+    border: 1px solid grey;
+    font-size: 16px;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    min-width: 48px;
+  }
+
+  th {
+    background-color: #000;
+    text-align: left;
+    color: #FFF;
+    font-size: 16px;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    line-height: 20px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
 /* fonts and stuff */
 
 @font-face {
