@@ -89,6 +89,18 @@
     /* Add more styles as needed */
 }
 
+.heading-s {
+    font-size: 19px; /* Adjust the font size as needed */
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 28px;
+    color: #333;    /* Change the text color as needed */
+    font-weight: bold; /* You can adjust the font weight as needed */
+    margin-bottom: 12px;
+    margin-top: 0px;
+    /* Add more styles as needed */
+}
+
 .lead-paragraph {
     font-size: 24px;
     font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -223,11 +235,12 @@ li {
 table {
     border-collapse: collapse;
     width: 100%;
+    margin-bottom: 32px;
   }
 
   th, td {
-    padding: 8px 8px 8px 8px;
-    border: 1px solid grey;
+    padding: 6px 8px 6px 8px;
+    border: 0px solid #efefef;
     font-size: 16px;
     font-family: "Inter", Arial, Helvetica, sans-serif;
     line-height: 20px;
@@ -235,16 +248,16 @@ table {
   }
 
   th {
-    background-color: #000;
+    background-color: rgb(243, 242, 241);
     text-align: left;
-    color: #FFF;
+    color: #333;
     font-size: 16px;
     font-family: "Inter", Arial, Helvetica, sans-serif;
     line-height: 20px;
   }
 
   tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #efefef;
   }
 
 /* fonts and stuff */
