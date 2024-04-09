@@ -152,12 +152,9 @@ body, html {
     font-family: "Inter", Arial, Helvetica, sans-serif;
     line-height: 24px;
     font-weight: bold;
-    margin-top: 0; /* Remove margin on top */
-    padding-top: 0; /* Remove padding on top */
     color: rgb(29, 112, 184);
     text-decoration: underline;
-    padding-bottom: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 8px; /* Add margin-bottom to create space */
 }
 
 .link {
@@ -221,6 +218,8 @@ li {
 }
 
 .chevron-card-wrapper {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
     padding: 20px, 0, 0, 6, 4px;
 
 }
@@ -339,7 +338,7 @@ table {
 
 @media (max-width: 768px) {
     .homepage-header-intro {
-        font-size: 40px;
-        line-height: 44px;
+        font-size: 48px;
+        line-height: 52px;
     }
 }
