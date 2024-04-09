@@ -1,3 +1,8 @@
+body, html {
+    margin: 0;
+    padding: 0s;
+}
+
 .width-container {
     max-width: 960px;
     margin-left: auto;
@@ -24,6 +29,14 @@
     display: block;
     box-sizing: border-box; /* Include padding within the width */
     padding: 0 16px; /* Adjust padding as needed */
+}
+
+.pl-header__logotype-text {
+    font-family: "Inter", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1;
 }
 
 .grid-column-one-third {
@@ -260,6 +273,26 @@ table {
     background-color: #efefef;
   }
 
+  .super-navigation-header {
+    background-color: black;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.pl-header__logotype-text {
+    font-family: "Inter", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin: 0; /* Add this line */
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
 /* fonts and stuff */
 
 @font-face {
@@ -277,3 +310,23 @@ table {
     src: url('fonts/Inter-Bold.ttf') format('truetype');
 }
 
+.homepage-header {
+    padding-top: 15px;
+    padding-bottom: 60px;
+    background-color: #1d70b8;
+}
+
+.homepage-header-intro {
+    font-size: 56px; /* Adjust the font size as needed */
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 60px;
+    color: #333;    /* Change the text color as needed */
+    font-weight: bold; /* You can adjust the font weight as needed */
+    margin-top: 0px;
+    /* Add more styles as needed */ 
+}
+
+.homepage-header_title-container{
+    max-width: 80%;
+}
