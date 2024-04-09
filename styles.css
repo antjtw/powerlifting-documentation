@@ -339,7 +339,7 @@ table {
 
 @media (max-width: 768px) {
     .homepage-header-intro {
-        font-size: 48px;
-        line-height: 52px;
+        font-size: 40px;
+        line-height: 44px;
     }
 }
