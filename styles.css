@@ -166,6 +166,16 @@ body, html {
     margin-bottom: 8px; /* Add margin-bottom to create space */
 }
 
+.chevron-link-small {
+    font-size: 16px;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    font-weight: bold;
+    color: rgb(29, 112, 184);
+    text-decoration: underline;
+    margin-bottom: 8px; /* Add margin-bottom to create space */
+}
+
 .link {
     font-size: 19px;
     font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -214,6 +224,7 @@ li {
     background: #f3f2f1;
     display: block;
     border-left: 3px solid black; /* Set border style, color, and width */
+    border-radius: 0px, 8px, 8px, 0px;
 }
 
 .directory-list {
@@ -355,4 +366,21 @@ table {
         font-size: 48px;
         line-height: 52px;
     }
+    
+}
+
+
+
+.data-module {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.data-module-wrapper-two-thirds {
+    padding-left: 16px;
+    width: 66.666666667%;
+}
+
+.data-module-img-wrapper-one-third {
+    margin: 0;
 }
