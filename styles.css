@@ -23,16 +23,17 @@ body, html {
     padding: 0 16px;
 }
 
-ul {
+.ul-content {
     list-style-type: none; /* Remove default bullet */
-    padding-left: 10px; /* Adjust padding to create space for en dash */
+    padding-left: 0;
   }
 
-  li {
+  .li-content {
+    list-style-type: none; /* Remove default bullet */
     text-indent: -16px; /* Pull text back to align with en dash */
   }
   
-  li:before {
+  .li-content:before {
     content: "–"; /* En dash */
     margin-right: 8px; /* Space between en dash and text */
   }
