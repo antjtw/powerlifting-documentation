@@ -33,7 +33,7 @@ import Base from '../../layouts/Base.astro';
           document.getElementById('ans').focus();
         } catch (e) { fallback(v); }
       }
-      form.addEventListener('submit', function (e) { if (!q.value.trim()) return; if (/^\d{1,2}(\.\d{1,2}){0,2}$/.test(q.value.trim())) { e.preventDefault(); location.href = '/en/2026/' + q.value.trim() + '/'; return; } e.preventDefault(); history.replaceState(null, '', '?q=' + encodeURIComponent(q.value)); run(q.value); });
+      form.addEventListener('submit', function (e) { if (!q.value.trim()) return; q.value = q.value.normalize('NFKC'); if (/^\d{1,2}(\.\d{1,2}){0,2}$/.test(q.value.trim())) { e.preventDefault(); location.href = '/en/2026/' + q.value.trim() + '/'; return; } e.preventDefault(); history.replaceState(null, '', '?q=' + encodeURIComponent(q.value)); run(q.value); });
       var init = new URLSearchParams(location.search).get('q'); if (init) { q.value = init; run(init); }
     })();
   </script>

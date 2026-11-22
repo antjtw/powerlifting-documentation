@@ -18,7 +18,7 @@ import Base from '../../layouts/Base.astro';
       var input = document.getElementById('q'), out = document.getElementById('results'), status = document.getElementById('status');
       var pf, timer;
       var q0 = new URLSearchParams(location.search).get('q');
-      function jump(v) { var m = v.trim().match(/^\d{1,2}(\.\d{1,2}){0,2}$/); if (m) { location.href = '/en/2026/' + v.trim() + '/'; return true; } return false; }
+      function jump(v) { v = v.normalize('NFKC').replace(/[．。]/g, '.'); var m = v.trim().match(/^\d{1,2}(\.\d{1,2}){0,2}$/); if (m) { location.href = '/en/2026/' + v.trim() + '/'; return true; } return false; }
       async function run(v) {
         if (!v.trim()) { out.innerHTML = ''; status.textContent = ''; return; }
         try { pf = pf || await import('/pagefind/pagefind.js'); } catch (e) { status.textContent = 'Search index is not available in this build. Use the contents instead.'; return; }

@@ -157,6 +157,16 @@
   .meta-table td, .meta-table th { font-size: .95rem; }
 }
 
+@layer components {
+  :root[data-venue='1'] { --body-weight: 600; --text: #000; --muted: #222; --rule: #555; }
+  :root[data-venue='1'] body { font-size: 1.5rem; line-height: 1.55; }
+  :root[data-venue='1'][data-theme='dark'] { --text: #fff; --muted: #eee; --rule: #aaa; }
+  @media (prefers-color-scheme: dark) { :root[data-venue='1']:not([data-theme='light']) { --text: #fff; --muted: #eee; --rule: #aaa; } }
+  :root[data-venue='1'] .copy, :root[data-venue='1'] .rail { display: none; }
+  :root[data-venue='1'] .page.rule-page { grid-template-columns: minmax(0, 1fr); }
+  .site-header #venue[aria-pressed='true'] { background: var(--red-600); border-color: var(--red-600); }
+}
+
 @layer print {
   @media print {
     :root, :root[data-theme='dark'] { --bg: #fff; --text: #19194d; --accent: #e30c1a; --muted: #52527a; --mark: #ffe6e8; }

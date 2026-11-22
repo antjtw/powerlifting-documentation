@@ -1,0 +1,48 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Attempt clock" current="/en/tools/" description="Practice timers for the 1-minute attempt allowance and the 1-minute submission window.">
+  <div class="wrap">
+    <div class="sec-head" style="padding-top:2rem"><h1>Attempt clock</h1>
+      <p class="meta">A practice timer for coaches and volunteers. It is not an official clock. The official clock operator and the referees decide.</p></div>
+    <div class="clocks">
+      <section class="box" aria-labelledby="c1"><h2 id="c1">Start the attempt</h2>
+        <p class="src">The lifter has one minute from the speaker's call to start the lift (<a href="/en/2026/6.2/#d">6.2 (d)</a>).</p>
+        <p class="digits" id="d1" role="timer" aria-live="off">1:00</p>
+        <p><button class="btn" data-clock="1" data-sec="60">Start</button> <button class="btn alt" data-pause="1">Pause</button> <button class="btn alt" data-reset="1">Reset</button></p></section>
+      <section class="box" aria-labelledby="c2"><h2 id="c2">Submit the next attempt</h2>
+        <p class="src">One minute from the lights to hand in the next weight (<a href="/en/2026/6.1/#j">6.1 (j)</a>).</p>
+        <p class="digits" id="d2" role="timer" aria-live="off">1:00</p>
+        <p><button class="btn" data-clock="2" data-sec="60">Start</button> <button class="btn alt" data-pause="2">Pause</button> <button class="btn alt" data-reset="2">Reset</button></p></section>
+    </div>
+    <p id="said" class="vh" role="status"></p>
+  </div>
+  <style>
+    .clocks { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); margin-top: 1rem; }
+    .clocks .box { background: var(--bg-soft); border: 1px solid var(--rule); border-radius: .7rem; padding: 1.25rem; }
+    .digits { font-size: clamp(4rem, 14vw, 9rem); font-weight: 900; line-height: 1; margin-block: 1rem; font-variant-numeric: tabular-nums; }
+    .digits.low { color: var(--accent); }
+    .btn.alt { background: transparent; color: var(--text); border: 2px solid var(--text); }
+    .src { font-size: .9rem; color: var(--muted); }
+  </style>
+  <script is:inline>
+    (function () {
+      var state = {}, said = document.getElementById('said');
+      function fmt(s) { return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+      function show(id) { var el = document.getElementById('d' + id); el.textContent = fmt(state[id].left); el.classList.toggle('low', state[id].left <= 10); }
+      function init(id, sec) { state[id] = state[id] || { left: sec, sec: sec, t: null }; }
+      function stop(id) { clearInterval(state[id].t); state[id].t = null; }
+      document.addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        var id = b.dataset.clock || b.dataset.pause || b.dataset.reset; if (!id) return;
+        init(id, 60);
+        if (b.dataset.clock && !state[id].t) {
+          if (state[id].left <= 0) state[id].left = state[id].sec;
+          state[id].t = setInterval(function () { state[id].left--; show(id); if (state[id].left === 10) said.textContent = '10 seconds'; if (state[id].left <= 0) { stop(id); said.textContent = 'Time'; } }, 1000);
+        }
+        if (b.dataset.pause) stop(id);
+        if (b.dataset.reset) { stop(id); state[id].left = state[id].sec; show(id); }
+      });
+    })();
+  </script>
+</Base>

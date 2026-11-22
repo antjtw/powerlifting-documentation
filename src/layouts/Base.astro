@@ -23,7 +23,7 @@ const nav = [
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script is:inline>
-      try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+      try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; if (localStorage.getItem('venue') === '1') document.documentElement.dataset.venue = '1'; } catch (e) {}
     </script>
   </head>
   <body>
@@ -34,6 +34,7 @@ const nav = [
         <span class="tag">Unofficial companion</span>
         <nav aria-label="Main">
           {nav.map(([href, label]) => <a href={href} aria-current={current === href ? 'page' : undefined}>{label}</a>)}
+          <button type="button" id="venue" aria-pressed="false" title="Large text, high contrast, keeps the screen awake">Venue mode</button>
           <button type="button" id="theme" aria-label="Switch between light and dark">Light / dark</button>
         </nav>
       </div>
@@ -53,6 +54,14 @@ const nav = [
         document.documentElement.dataset.theme = next;
         try { localStorage.setItem('theme', next); } catch (e) {}
       });
+      (function () {
+        var v = document.getElementById('venue'), lock = null;
+        function wake() { if (document.documentElement.dataset.venue === '1' && navigator.wakeLock) navigator.wakeLock.request('screen').then(function (l) { lock = l; }, function () {}); else if (lock) { lock.release(); lock = null; } }
+        function sync() { v.setAttribute('aria-pressed', document.documentElement.dataset.venue === '1' ? 'true' : 'false'); wake(); }
+        v.addEventListener('click', function () { var on = document.documentElement.dataset.venue !== '1'; if (on) document.documentElement.dataset.venue = '1'; else delete document.documentElement.dataset.venue; try { localStorage.setItem('venue', on ? '1' : '0'); } catch (e) {} sync(); });
+        document.addEventListener('visibilitychange', function () { if (!document.hidden) wake(); });
+        sync();
+      })();
       document.addEventListener('click', function (e) {
         var b = e.target.closest && e.target.closest('.copy');
         if (!b) return;
