@@ -10,6 +10,7 @@
     "verify": "node tools/verify.mjs",
     "dev": "astro dev",
     "build": "node tools/verify.mjs && astro build && pagefind --site dist",
+    "test:ask": "node --test ask/ask.test.mjs",
     "preview": "astro preview"
   },
   "dependencies": {

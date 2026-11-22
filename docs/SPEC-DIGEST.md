@@ -32,3 +32,7 @@ Figures/photos (placeholders, rights unchecked) · Failure-card flip, scoreboard
 ## Known extraction notes
 
 Clause ids: `tr2026.{section}.item-N` (numbered), `.a` (lettered), `.pt-x` (A./1. sub-items); duplicate printed labels get `-2` (6.1 (b)). Chapter 1's 1.1 and 1.2 sit inside its numbered list, so they render inline. Chapter 1 title comes from the contents page. Section headings are shown as printed (uppercase).
+
+## Ask (phase 2 skeleton)
+
+`ask/` holds the server side, not yet deployed or wired to the UI: `edition.mjs` (whole edition as one cached document), `verify.mjs` (quote must be an exact substring of the cited unit; no citation means decline), `handler.mjs` (single Claude API call, returns null to fall back to keyword search), `golden.seed.json` (30 seed questions with the clauses a correct answer must cite; drafts for international referees to extend to ~200). Run `npm run test:ask`. Still needed: calculator tool calls, rate limiting and spend cap, the Ask page, the referee-written golden set and the 95% citation gate.
