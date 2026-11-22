@@ -1,7 +1,7 @@
-// Vercel serverless function: POST /api/ask {q}. Returns a verified, cited answer, or {fallback:true}.
+// OPTIONAL, NOT DEPLOYED. To use, move to api/ask.mjs (and fix the import path). Vercel serverless function: POST /api/ask {q}. Returns a verified, cited answer, or {fallback:true}.
 // Needs ANTHROPIC_API_KEY. Rate limit here is per-instance memory only: put a shared store
 // (edge KV) and a hard monthly spend cap in front before launch.
-import { ask } from '../ask/handler.mjs';
+import { ask } from '../handler.mjs';
 
 const hits = new Map();
 const LIMIT = 20, WINDOW = 10 * 60 * 1000;

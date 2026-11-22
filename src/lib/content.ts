@@ -114,6 +114,7 @@ export function labelOf(id: string) {
   if (!hit) return id;
   const { node, unit } = hit;
   if (node.type === 'section' || node.type === 'chapter') return `${node.number} ${display(node.title!)}`;
-  const parts = id.slice(unit.id!.length + 1).split('.').map((x) => (/^item-\d+$/.test(x) ? x.slice(5) + ')' : /^[a-z]$/.test(x) ? `(${x})` : /^pt-/.test(x) ? x.slice(3) + '.' : x));
+  const prefix: string[] = [];
+  const parts = id.slice(unit.id!.length + 1).split('.').map((x) => { prefix.push(x); const g = byId.get(`${unit.id}.${prefix.join('.')}`)?.node; if (g?.type === 'group' && g.title) return display(g.title.replace(/:$/, '')); return x; }).map((x) => (/^item-\d+$/.test(x) ? x.slice(5) + ')' : /^[a-z]$/.test(x) ? `(${x})` : /^pt-/.test(x) ? x.slice(3) + '.' : x));
   return `${unit.number} ${parts.join(' ')}`;
 }

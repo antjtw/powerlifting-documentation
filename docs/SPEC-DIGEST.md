@@ -42,3 +42,7 @@ Clause ids: `tr2026.{section}.item-N` (numbered), `.a` (lettered), `.pt-x` (A./1
 - **Redline reading:** keep red (inserted) text, omit struck text, list omissions publicly.
 - **Corrections:** five purely mechanical fixes applied via `content/corrections.json` (delegated sign-off, for Ant's review). Everything near the meaning line, all relabelling and all flag-to-IPF items stay as printed and are listed at `/en/corrections/`.
 - **Ask:** page at `/en/ask/` and `api/ask.mjs` (Vercel function) built; falls back to search with no key or no verified answer. Before launch: set `ANTHROPIC_API_KEY`, add shared rate limiting and a spend cap, run the golden set against the real model.
+
+## Update: free Ask (no API key)
+
+Ask now runs entirely in the browser (`/en/ask/`, index at `/ask-index.json`): stop-word removal, light stemming, a small synonym list and BM25 ranking return the best-matching rules, quoted verbatim with the relevant sentence highlighted. Numeric questions point to the calculators; anti-doping questions get a "not covered, no advice" notice. No generated text, so no misquote risk and no running cost. `tools/eval-ask.cjs` checks it against the golden seed (28/29 have a required rule in the results). The model-backed version is kept but not deployed in `ask/` (`ask/vercel-function/ask.mjs`); add a key later only if the quality bar justifies it.

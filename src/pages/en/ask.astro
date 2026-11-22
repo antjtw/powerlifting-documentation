@@ -4,36 +4,84 @@ import Base from '../../layouts/Base.astro';
 <Base title="Ask the Rulebook" current="/en/ask/" description="Ask a question in plain language and get an answer that quotes the exact rules.">
   <div class="wrap">
     <div class="sec-head" style="padding-top:2rem"><h1>Ask the Rulebook</h1>
-      <p class="meta">Answers quote the exact rules. The rules are the authority; the answer is a guide.</p></div>
-    <p class="notice"><strong>Guidance, not a ruling.</strong> On the platform, the referees and Jury decide. Questions are not tied to you; they may be reviewed to improve answers.</p>
+      <p class="meta">Type a question in plain words. You get the rules that may answer it, quoted exactly.</p></div>
+    <p class="notice"><strong>Guidance, not a ruling.</strong> On the platform, the referees and Jury decide. Your question stays in your browser; nothing is sent anywhere.</p>
     <form class="searchbox" action="/en/search/" method="get" id="askform">
       <label class="vh" for="q">Your question</label>
       <input id="q" name="q" type="search" placeholder="Can I wear knee sleeves under a long-legged singlet?" autocomplete="off" />
       <button class="btn" type="submit">Ask</button>
     </form>
-    <p style="margin-top:.5rem;font-size:.9rem;color:var(--muted)">Without JavaScript, this form searches the rulebook instead.</p>
+    <p style="margin-top:.5rem;font-size:.9rem;color:var(--muted)">Without JavaScript, this form searches the rulebook instead. It matches words and common synonyms; it does not write an answer.</p>
     <div id="out" aria-live="polite" style="margin-top:1.5rem;max-inline-size:var(--measure)"></div>
   </div>
   <script is:inline>
     (function () {
-      var form = document.getElementById('askform'), q = document.getElementById('q'), out = document.getElementById('out');
+      var form = document.getElementById('askform'), q = document.getElementById('q'), out = document.getElementById('out'), idx = null;
+      var STOP = 'a an the is are was be am do does did can could may might must shall should will would i me my we you your to of in on at for with by from as it its this that these those and or but not no if so than then there their they he she his her what which who whom when where why how any all each many much more most some such into out up down over under about after before during while have has had having get got just also only'.split(' ');
+      var SYN = { fail: ['unsuccessful'], failed: ['unsuccessful'], fails: ['unsuccessful'], failing: ['unsuccessful'], many: ['number'], hand: ['submit'], handed: ['submit'], give: ['submit'], deadline: ['submit', 'minute'], change: ['changes'], sleeve: ['knee'], sleeves: ['knee'], shoe: ['boot', 'footwear'], shoes: ['boot', 'footwear'], boots: ['shoe'], hat: ['head', 'wear'], cap: ['head', 'wear'], hijab: ['head', 'wear'], scarf: ['head', 'wear'], tape: ['medical'], plaster: ['medical', 'tape'], kit: ['equipment', 'inspection'], gear: ['equipment', 'inspection'], clothes: ['equipment'], singlet: ['suit'], ref: ['referee'], refs: ['referee'], judge: ['referee'], judges: ['referee'], light: ['lights'], red: ['card', 'failure'], blue: ['card', 'failure'], yellow: ['card', 'failure'], weighin: ['weigh'], weigh: ['weight', 'weighing'], weight: ['weigh'], scale: ['scales'], plates: ['disc'], plate: ['disc'], discs: ['disc'], bar: ['barbell'], clock: ['time', 'timing'], timer: ['time'], seconds: ['time'], minute: ['time'], minutes: ['time'], protest: ['appeal', 'jury'], complain: ['appeal', 'complaint', 'jury'], complaint: ['appeal', 'jury'], replay: ['instant'], video: ['replay', 'filming'], phone: ['pictures', 'filming'], photos: ['pictures', 'filming'], injured: ['injury', 'doctor'], injury: ['doctor'], drug: ['doping'], drugs: ['doping'], tue: ['doping'], coach: ['coaches'], deadlift: ['deadlift'], bench: ['bench'], squat: ['squat'], hair: ['hair'], belt: ['belt'], rack: ['racks'], record: ['records'], award: ['medals'], prize: ['medals'], points: ['point'], age: ['age', 'categories'], junior: ['junior', 'sub-junior'], master: ['master'], masters: ['master'] };
+      function stem(w) { return w.replace(/(ing|ed|es|s)$/, function (m, g, off) { return off >= 3 ? '' : m; }); }
+      function toks(s) { return s.toLowerCase().normalize('NFKC').replace(/[^a-z0-9.\-\s]/g, ' ').split(/\s+/).filter(Boolean).map(function (w) { return w.replace(/^[.\-]+|[.\-]+$/g, ''); }).filter(Boolean); }
+      function terms(question) {
+        var base = toks(question).reduce(function (a, w) { return a.concat(w.indexOf('-') > 0 ? [w].concat(w.split('-')) : [w]); }, []).filter(function (w) { return STOP.indexOf(w) < 0; }), weighted = {};
+        base.forEach(function (w) { weighted[stem(w)] = 1; });
+        toks(question).concat(base).forEach(function (w) { (SYN[w] || []).forEach(function (x) { if (!weighted[stem(x)]) weighted[stem(x)] = 0.5; }); });
+        return weighted;
+      }
+      function build(rows) {
+        var df = {}, N = rows.length, avg = 0;
+        rows.forEach(function (r) { r.tk = toks(r.x + ' ' + r.h).map(stem); r.hk = toks(r.h + ' ' + r.t).map(stem); avg += r.tk.length; r.tf = {}; r.tk.forEach(function (w) { r.tf[w] = (r.tf[w] || 0) + 1; }); Object.keys(r.tf).forEach(function (w) { df[w] = (df[w] || 0) + 1; }); });
+        return { rows: rows, df: df, N: N, avg: avg / N };
+      }
+      function score(ix, W) {
+        var res = [];
+        ix.rows.forEach(function (r) {
+          var s = 0, hit = 0;
+          Object.keys(W).forEach(function (w) {
+            var f = r.tf[w] || 0; if (!f) return; hit++;
+            var idf = Math.log(1 + (ix.N - (ix.df[w] || 0) + 0.5) / ((ix.df[w] || 0) + 0.5));
+            s += W[w] * idf * (f * 2.2) / (f + 1.2 * (0.25 + 0.75 * r.tk.length / ix.avg));
+            if (r.hk.indexOf(w) >= 0) s += W[w] * idf * 0.6;
+          });
+          var need = Object.keys(W).filter(function (w) { return W[w] === 1; }).length;
+          if (s > 0) res.push({ r: r, s: s * (1 + 0.25 * hit / Math.max(1, Object.keys(W).length)) });
+        });
+        res.sort(function (a, b) { return b.s - a.s; });
+        return res;
+      }
       function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
-      function url(id) { var m = id.match(/^tr2026\.((?:\d+\.)*\d+)(?:\.(.*))?$/); return m ? '/en/2026/' + m[1] + '/' + (m[2] ? '#' + m[2] : '') : '/en/2026/'; }
-      function fallback(v) { out.innerHTML = '<p>No verified answer is available right now. <a href="/en/search/?q=' + encodeURIComponent(v) + '">Here are the matching rules.</a></p>'; }
+      function sentences(text) { return text.split(/(?<=[.;:?!”])\s+|\n/).filter(function (x) { return x.trim(); }); }
+      function show(text, W) {
+        var best = -1, bi = 0, ss = sentences(text);
+        ss.forEach(function (sn, i) { var c = 0; toks(sn).forEach(function (w) { if (W[stem(w)]) c += W[stem(w)]; }); if (c > best) { best = c; bi = i; } });
+        return ss.map(function (sn, i) {
+          var h = esc(sn).replace(/[A-Za-z0-9\-]+/g, function (w) { return W[stem(w.toLowerCase())] ? '<mark>' + w + '</mark>' : w; });
+          return i === bi ? '<strong>' + h + '</strong>' : h;
+        }).join(' ');
+      }
+      var TOOLS = [[/born|age categor|how old|which age|junior|master|sub-?junior/i, 'Age category calculator'], [/weight class|bodyweight categor|which class|what class/i, 'Weight class calculator'], [/load|plates?|discs?|kg on the bar|how do i load/i, 'Plate loader'], [/compensat|lifters in (a |the )?group|how much time/i, 'Compensatory time calculator']];
       async function run(v) {
         out.innerHTML = '<p>Looking through the rulebook…</p>';
-        try {
-          var r = await fetch('/api/ask', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ q: v }) });
-          var d = await r.json();
-          if (!d.answer) return fallback(v);
-          var a = d.answer, chip = { answered: 'Answered', partly: 'Partly covered', 'not-covered': 'Not in the Technical Rulebook' }[a.status];
-          out.innerHTML = '<p><span class="chip">' + chip + '</span></p><h2 tabindex="-1" id="ans" style="font-size:1.3rem;margin-top:.75rem">' + esc(a.short_answer) + '</h2>' +
-            (a.citations || []).map(function (c) { return '<blockquote style="margin:1rem 0;padding-inline-start:1rem;border-inline-start:4px solid var(--accent)"><p lang="en">“' + esc(c.quote) + '”</p><p><a href="' + url(c.id) + '">' + esc(c.id.replace('tr2026.', 'Rule ')) + '</a> · PDF p.' + c.page + '</p></blockquote>'; }).join('') +
-            '<p style="color:var(--muted)">' + esc(a.footer) + '</p>';
-          document.getElementById('ans').focus();
-        } catch (e) { fallback(v); }
+        if (!idx) { try { idx = build(await (await fetch('/ask-index.json')).json()); } catch (e) { out.innerHTML = '<p>The rule index could not be loaded. <a href="/en/search/?q=' + encodeURIComponent(v) + '">Try search.</a></p>'; return; } }
+        var W = terms(v), all = score(idx, W), res = all.filter(function (m) { return m.s >= all[0].s * 0.4; }).slice(0, 6), html = '';
+        if (/doping|drugs?\b|\btue\b|substance|banned|prohibited|steroid|supplement|wada|cces/i.test(v)) html += '<p class="notice"><strong>Anti-doping is not covered by the Technical Rulebook.</strong> This site gives no advice on it. See the IPF Anti-Doping Rules and your national anti-doping organisation. The rules below only mention drug testing in passing.</p>';
+        var tools = TOOLS.filter(function (t) { return t[0].test(v); });
+        if (tools.length) html += '<p class="notice">For numbers, use the <a href="/en/tools/">' + tools.map(function (t) { return t[1]; }).join(', ') + '</a>: the calculators apply the rule tables exactly.</p>';
+        if (!all.length) { out.innerHTML = html + '<p><span class="chip">Not found</span></p><p>No rule matches those words. The question may be outside the Technical Rulebook (for example anti-doping, the By-Laws or the Approved List). Try different words or <a href="/en/search/?q=' + encodeURIComponent(v) + '">search</a>.</p>'; return; }
+        html += '<p><span class="chip">Best matches</span> <span style="color:var(--muted)">' + res.length + ' rules, most relevant first. The rule is the authority.</span></p><h2 tabindex="-1" id="ans" style="font-size:1.2rem;margin-top:.75rem">Rules that may answer this</h2>';
+        html += res.map(function (m) {
+          var r = m.r;
+          return '<blockquote style="margin:1.1rem 0;padding-inline-start:1rem;border-inline-start:4px solid var(--accent)" lang="en"><p style="font-size:.9rem;color:var(--muted)"><a href="' + r.u + '"><strong>' + esc(r.t) + '</strong></a> · ' + esc(r.h) + ' · PDF p.' + r.p + '</p><p>' + show(r.x.length > 700 ? r.x.slice(0, 700) + '…' : r.x, W) + '</p></blockquote>';
+        }).join('');
+        html += '<p style="color:var(--muted)">Guidance, not a ruling. On the platform, the referees and Jury decide. If rules seem to disagree, read both and ask the Chief Referee.</p>';
+        out.innerHTML = html;
+        document.getElementById('ans').focus();
       }
-      form.addEventListener('submit', function (e) { if (!q.value.trim()) return; q.value = q.value.normalize('NFKC'); if (/^\d{1,2}(\.\d{1,2}){0,2}$/.test(q.value.trim())) { e.preventDefault(); location.href = '/en/2026/' + q.value.trim() + '/'; return; } e.preventDefault(); history.replaceState(null, '', '?q=' + encodeURIComponent(q.value)); run(q.value); });
+      form.addEventListener('submit', function (e) {
+        q.value = q.value.normalize('NFKC'); var t = q.value.trim(); if (!t) return;
+        e.preventDefault();
+        if (/^\d{1,2}(\.\d{1,2}){0,2}$/.test(t)) { location.href = '/en/2026/' + t + '/'; return; }
+        history.replaceState(null, '', '?q=' + encodeURIComponent(t)); run(t);
+      });
       var init = new URLSearchParams(location.search).get('q'); if (init) { q.value = init; run(init); }
     })();
   </script>
