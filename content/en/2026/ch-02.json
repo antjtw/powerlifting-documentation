@@ -1,0 +1,842 @@
+{
+ "type": "chapter",
+ "id": "tr2026.2",
+ "number": "2",
+ "title": "EQUIPMENT AND SPECIFICATIONS",
+ "toc_title": "EQUIPMENT AND SPECIFICATIONS",
+ "title_source": "body",
+ "page": 7,
+ "content": [
+  {
+   "type": "section",
+   "id": "tr2026.2.1",
+   "number": "2.1",
+   "title": "SCALES",
+   "toc_title": "Scales",
+   "page": 7,
+   "content": [
+    {
+     "type": "p",
+     "text": "Scales must be of an electronic digital type and register to the second place of decimals. They must have the capacity to weigh up to 180 kg. A certificate verifying the calibration of the scales must be valid within one year of the competition date.",
+     "page": 7,
+     "id": "tr2026.2.1.p1",
+     "sha256": "3a2f572d837f5649dc59401a93234b1dc4d642f35f8439472f500f15f4ec60d9"
+    }
+   ],
+   "text": "Scales must be of an electronic digital type and register to the second place of decimals. They must have the capacity to weigh up to 180 kg. A certificate verifying the calibration of the scales must be valid within one year of the competition date.",
+   "sha256": "09211f441ca822b172de06b026237c63d44373a73d6926d64621224548802fde"
+  },
+  {
+   "type": "section",
+   "id": "tr2026.2.2",
+   "number": "2.2",
+   "title": "PLATFORM",
+   "toc_title": "Platform",
+   "page": 7,
+   "content": [
+    {
+     "type": "p",
+     "text": "All lifts shall be carried out on a platform measuring between 2.5 m x 2.5 m minimum and 4.0 m x 4.0 m maximum. It must not exceed 10 cm in height from the surrounding stage or floor. The surface of the platform must be flat, firm and level and covered with a material of non-slip smooth carpet (i.e. free from irregularities and projections). Rubber matting or similar sheeting materials are not permitted.",
+     "page": 7,
+     "id": "tr2026.2.2.p1",
+     "sha256": "dd4d5b4cc5ff7fc061029a8a7daa1b7b5a0143d5982f16b33495dd675ac33012"
+    }
+   ],
+   "text": "All lifts shall be carried out on a platform measuring between 2.5 m x 2.5 m minimum and 4.0 m x 4.0 m maximum. It must not exceed 10 cm in height from the surrounding stage or floor. The surface of the platform must be flat, firm and level and covered with a material of non-slip smooth carpet (i.e. free from irregularities and projections). Rubber matting or similar sheeting materials are not permitted.",
+   "sha256": "a381f990b69083c9e4831216b12ff0c6167beff4745fc04611f0774669470b23"
+  },
+  {
+   "type": "section",
+   "id": "tr2026.2.3",
+   "number": "2.3",
+   "title": "BARS AND DISCS",
+   "toc_title": "Bars and discs",
+   "page": 7,
+   "content": [
+    {
+     "type": "p",
+     "text": "For all powerlifting contests organized under the rules of the IPF, only disc barbells are permitted. The use of discs which do not meet the current specifications will invalidate the contest and any records accomplished. Only those bars and discs that meet all specifications may be used throughout the entire competition and for all lifts. The bar shall not be changed during the competition unless it is bent or damaged in some way as determined by the Technical Committee, Jury or Referees.",
+     "page": 7,
+     "id": "tr2026.2.3.p1",
+     "sha256": "b02844dc1876dd0029030c674f1c54ae2b74d9f30284fbfe4e95e4ded01b49a3"
+    },
+    {
+     "type": "p",
+     "text": "Bars to be used at all IPF Championships shall not be chromed on the knurling. Only bars and discs that have official IPF approval may be used at IPF World Championships or the setting of World Records. As from 2008 the “knurling” distances on IPF approved bars will become universal/standard based on one of the originally approved bars.",
+     "page": 8,
+     "id": "tr2026.2.3.p2",
+     "sha256": "e99c6859736dd0841eb1fa368c73f7d2a79b4cbd34e79b2ace4947cb6e4fb6d6"
+    },
+    {
+     "type": "clause",
+     "id": "tr2026.2.3.a",
+     "label": "(a)",
+     "label_kind": "alpha",
+     "page": 8,
+     "content": [
+      {
+       "type": "p",
+       "text": "The bar shall be straight and well knurled and grooved and shall conform to the following dimensions:",
+       "page": 8,
+       "sha256": "22d95d5d976fecda49e2537ab2a02b957293ef01ed3ed6367fd7497480b2a5e3"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.a.pt-1",
+       "label": "1.",
+       "label_kind": "sub",
+       "page": 8,
+       "content": [
+        {
+         "type": "p",
+         "text": "Total overall length not to exceed 2.2 m.",
+         "page": 8,
+         "sha256": "f67c4e2350e5f92934f25747b784df184e9d1402d731bb83d2b0de00f59e22e7"
+        }
+       ],
+       "text": "Total overall length not to exceed 2.2 m.",
+       "sha256": "f67c4e2350e5f92934f25747b784df184e9d1402d731bb83d2b0de00f59e22e7"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.a.pt-2",
+       "label": "2.",
+       "label_kind": "sub",
+       "page": 8,
+       "content": [
+        {
+         "type": "p",
+         "text": "Distance between the collar faces is not to exceed 1.32 m or be less than 1.31 m.",
+         "page": 8,
+         "sha256": "d905e0a3c4821b603c35ddba8e100bf25b6759fdbf913bf5d24f35c8a1bfd084"
+        }
+       ],
+       "text": "Distance between the collar faces is not to exceed 1.32 m or be less than 1.31 m.",
+       "sha256": "d905e0a3c4821b603c35ddba8e100bf25b6759fdbf913bf5d24f35c8a1bfd084"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.a.pt-3",
+       "label": "3.",
+       "label_kind": "sub",
+       "page": 8,
+       "content": [
+        {
+         "type": "p",
+         "text": "Diameter of the bar is not to exceed 29 mm or be less than 28 mm.",
+         "page": 8,
+         "sha256": "de636067956edd13b6397817bb155dd1fb1f4d4e90195173f6cff1ccb374f114"
+        }
+       ],
+       "text": "Diameter of the bar is not to exceed 29 mm or be less than 28 mm.",
+       "sha256": "de636067956edd13b6397817bb155dd1fb1f4d4e90195173f6cff1ccb374f114"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.a.pt-4",
+       "label": "4.",
+       "label_kind": "sub",
+       "page": 8,
+       "content": [
+        {
+         "type": "p",
+         "text": "Weight of the bar and collars are to be 25 kg.",
+         "page": 8,
+         "sha256": "3e420a51709a3f28e438328fe75d772a0f57b3996ae26e617163727e87710503"
+        }
+       ],
+       "text": "Weight of the bar and collars are to be 25 kg.",
+       "sha256": "3e420a51709a3f28e438328fe75d772a0f57b3996ae26e617163727e87710503"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.a.pt-5",
+       "label": "5.",
+       "label_kind": "sub",
+       "page": 8,
+       "content": [
+        {
+         "type": "p",
+         "text": "Diameter of the sleeve not to exceed 52 mm or be less than 50 mm.",
+         "page": 8,
+         "sha256": "e484cf603cbdd329b1824badb8f0c7a26b18b710f59ffd636cc600265689350d"
+        }
+       ],
+       "text": "Diameter of the sleeve not to exceed 52 mm or be less than 50 mm.",
+       "sha256": "e484cf603cbdd329b1824badb8f0c7a26b18b710f59ffd636cc600265689350d"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.a.pt-6",
+       "label": "6.",
+       "label_kind": "sub",
+       "page": 8,
+       "content": [
+        {
+         "type": "p",
+         "text": "The bar shall have machined diameter markings spaced 81 cm apart.",
+         "page": 8,
+         "sha256": "f6bc57f9e4275022730b0c283623031877049e9144ba2a923eeae93ceb265118"
+        },
+        {
+         "type": "figure",
+         "caption": "IPF RECOGNIZED POWERLIFTING BAR GUIDELINE OF KNURLING DISTANCES",
+         "status": "needs-redraw",
+         "kind": "knurling",
+         "note": "Measurements in mm (knurling distances inside the collar sleeves)",
+         "values": [
+          "120",
+          "-",
+          "240",
+          "245",
+          "160",
+          "440",
+          "810",
+          "1320"
+         ],
+         "pdf_page": 8,
+         "id": "tr2026.2.3.fig1",
+         "page": 8,
+         "sha256": "12a503890cf23c5cb16f3e7c1097ac275d7ac4729d590233a249de46f07d9319"
+        }
+       ],
+       "text": "The bar shall have machined diameter markings spaced 81 cm apart.",
+       "sha256": "f6bc57f9e4275022730b0c283623031877049e9144ba2a923eeae93ceb265118"
+      }
+     ],
+     "text": "The bar shall be straight and well knurled and grooved and shall conform to the following dimensions:",
+     "sha256": "22d95d5d976fecda49e2537ab2a02b957293ef01ed3ed6367fd7497480b2a5e3"
+    },
+    {
+     "type": "clause",
+     "id": "tr2026.2.3.b",
+     "label": "(b)",
+     "label_kind": "alpha",
+     "page": 8,
+     "content": [
+      {
+       "type": "p",
+       "text": "Discs shall conform as follows:",
+       "page": 8,
+       "sha256": "3a989e64b36bc9353bea62181d46426152a8f5751974108930760d85d43e0a27"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.b.item-1",
+       "label": "1)",
+       "label_kind": "num",
+       "page": 8,
+       "content": [
+        {
+         "type": "p",
+         "text": "All discs used in competition must weigh within 0.25 percent or 10 grams of their face value.",
+         "page": 8,
+         "sha256": "dd41d6b369396f501d5eedb430bfbbaab5f2f2181c055b7d4692bbd078034a60"
+        },
+        {
+         "type": "table",
+         "caption": null,
+         "header": [
+          "Face Value in Kilos",
+          "Maximum",
+          "Minimum"
+         ],
+         "rows": [
+          [
+           "25",
+           "25.0625",
+           "24.9375"
+          ],
+          [
+           "20",
+           "20.05",
+           "19.95"
+          ],
+          [
+           "15",
+           "15.0375",
+           "14.9625"
+          ],
+          [
+           "10",
+           "10.025",
+           "9.975"
+          ],
+          [
+           "5",
+           "5.0125",
+           "4.9875"
+          ],
+          [
+           "2.5",
+           "2.51",
+           "2.49"
+          ],
+          [
+           "1.25",
+           "1.26",
+           "1.24"
+          ],
+          [
+           "1",
+           "1.01",
+           "0.99"
+          ],
+          [
+           "0.5",
+           "0.51",
+           "0.49"
+          ],
+          [
+           "0.25",
+           "0.255",
+           "0.245"
+          ]
+         ],
+         "kind": "disc-tolerances",
+         "status": null,
+         "id": "tr2026.2.3.table1",
+         "page": 8,
+         "sha256": "ee6dbb35c25e2017f7004f1663aeeba473c8a8d5f5ed621030aa2d81532edba0"
+        }
+       ],
+       "text": "All discs used in competition must weigh within 0.25 percent or 10 grams of their face value.",
+       "sha256": "dd41d6b369396f501d5eedb430bfbbaab5f2f2181c055b7d4692bbd078034a60"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.b.item-2",
+       "label": "2)",
+       "label_kind": "num",
+       "page": 9,
+       "content": [
+        {
+         "type": "p",
+         "text": "The hole size in the middle of the disc must not exceed 53 mm or be less than 52 mm.",
+         "page": 9,
+         "sha256": "ad821ceef86eb9debdf014ea36d15740afcb4855f3172d1e4397b6bcfb2c9a8a"
+        }
+       ],
+       "text": "The hole size in the middle of the disc must not exceed 53 mm or be less than 52 mm.",
+       "sha256": "ad821ceef86eb9debdf014ea36d15740afcb4855f3172d1e4397b6bcfb2c9a8a"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.b.item-3",
+       "label": "3)",
+       "label_kind": "num",
+       "page": 9,
+       "content": [
+        {
+         "type": "p",
+         "text": "Discs must be within the following range: 1.25 kg, 2.5 kg, 5 kg, 10 kg, 15 kg, 20 kg, and 25 kg.",
+         "page": 9,
+         "sha256": "a37fe34ce43524aeb99d3e1c31d6cdec471afce05bbc51cb5adf7fd0e3bfee55"
+        }
+       ],
+       "text": "Discs must be within the following range: 1.25 kg, 2.5 kg, 5 kg, 10 kg, 15 kg, 20 kg, and 25 kg.",
+       "sha256": "a37fe34ce43524aeb99d3e1c31d6cdec471afce05bbc51cb5adf7fd0e3bfee55"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.b.item-4",
+       "label": "4)",
+       "label_kind": "num",
+       "page": 9,
+       "content": [
+        {
+         "type": "p",
+         "text": "For record purposes, lighter discs may be used to achieve a weight of at least 0.25 kg, 0.5 kg, 1.0 kg, 1.5 kg or a) 2 kg more than the existing record.",
+         "page": 9,
+         "sha256": "9313fd5b787f2eab3c179ccf58c216614228d42ecbcc7ab149cae3666cd3c3aa"
+        }
+       ],
+       "text": "For record purposes, lighter discs may be used to achieve a weight of at least 0.25 kg, 0.5 kg, 1.0 kg, 1.5 kg or a) 2 kg more than the existing record.",
+       "sha256": "9313fd5b787f2eab3c179ccf58c216614228d42ecbcc7ab149cae3666cd3c3aa"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.b.item-5",
+       "label": "5)",
+       "label_kind": "num",
+       "page": 9,
+       "content": [
+        {
+         "type": "p",
+         "text": "Discs weighing 20 kg and over must not exceed 6 cm in thickness. Discs weighing 15 kg and under must not exceed 3 cm in thickness.",
+         "page": 9,
+         "sha256": "a64d79f133a8de90443a3b0c2e16763043eeb5904b00d0386ec53b680e26f7f3"
+        }
+       ],
+       "text": "Discs weighing 20 kg and over must not exceed 6 cm in thickness. Discs weighing 15 kg and under must not exceed 3 cm in thickness.",
+       "sha256": "a64d79f133a8de90443a3b0c2e16763043eeb5904b00d0386ec53b680e26f7f3"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.b.item-6",
+       "label": "6)",
+       "label_kind": "num",
+       "page": 9,
+       "content": [
+        {
+         "type": "p",
+         "text": "Discs must conform to the following color code: 10 kg and under - any color, 15 kg - yellow, 20 kg - blue, 25 kg - red.",
+         "page": 9,
+         "sha256": "350a1d415f1144c75e217fda6fc12c4f43d6d4a1b78f9214c41c124f0e51a35e"
+        }
+       ],
+       "text": "Discs must conform to the following color code: 10 kg and under - any color, 15 kg - yellow, 20 kg - blue, 25 kg - red.",
+       "sha256": "350a1d415f1144c75e217fda6fc12c4f43d6d4a1b78f9214c41c124f0e51a35e"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.b.item-7",
+       "label": "7)",
+       "label_kind": "num",
+       "page": 9,
+       "content": [
+        {
+         "type": "p",
+         "text": "All discs must be clearly marked with their weight and loaded in the sequence of heavier discs innermost with the smaller discs in descending weight arranged so that the referees can read the weight on each disc.",
+         "page": 9,
+         "sha256": "bf9db75832f9cfb5270a16ce3c10a64c88eefe94b1ae0dee13187ee4d57e6b29"
+        }
+       ],
+       "text": "All discs must be clearly marked with their weight and loaded in the sequence of heavier discs innermost with the smaller discs in descending weight arranged so that the referees can read the weight on each disc.",
+       "sha256": "bf9db75832f9cfb5270a16ce3c10a64c88eefe94b1ae0dee13187ee4d57e6b29"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.b.item-8",
+       "label": "8)",
+       "label_kind": "num",
+       "page": 9,
+       "content": [
+        {
+         "type": "p",
+         "text": "The first and heaviest discs loaded on the bar must be loaded face in; with the rest of the discs loaded face out.",
+         "page": 9,
+         "sha256": "0639ba7c1f84b901b70c387f518a5439c85557ca2cfce2b98aace709b875ca8a"
+        }
+       ],
+       "text": "The first and heaviest discs loaded on the bar must be loaded face in; with the rest of the discs loaded face out.",
+       "sha256": "0639ba7c1f84b901b70c387f518a5439c85557ca2cfce2b98aace709b875ca8a"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.2.3.b.item-9",
+       "label": "9)",
+       "label_kind": "num",
+       "page": 9,
+       "content": [
+        {
+         "type": "p",
+         "text": "The diameter of the largest discs shall not be more than 45 cm.",
+         "page": 9,
+         "sha256": "7091dacf83d98ef3a1d1248ebe55133054057f675a5f38d62a219936b459186e"
+        }
+       ],
+       "text": "The diameter of the largest discs shall not be more than 45 cm.",
+       "sha256": "7091dacf83d98ef3a1d1248ebe55133054057f675a5f38d62a219936b459186e"
+      }
+     ],
+     "text": "Discs shall conform as follows:",
+     "sha256": "3a989e64b36bc9353bea62181d46426152a8f5751974108930760d85d43e0a27"
+    }
+   ],
+   "text": "For all powerlifting contests organized under the rules of the IPF, only disc barbells are permitted. The use of discs which do not meet the current specifications will invalidate the contest and any records accomplished. Only those bars and discs that meet all specifications may be used throughout the entire competition and for all lifts. The bar shall not be changed during the competition unless it is bent or damaged in some way as determined by the Technical Committee, Jury or Referees.\nBars to be used at all IPF Championships shall not be chromed on the knurling. Only bars and discs that have official IPF approval may be used at IPF World Championships or the setting of World Records. As from 2008 the “knurling” distances on IPF approved bars will become universal/standard based on one of the originally approved bars.",
+   "sha256": "397a4489a5f880b6bee03091799a3f52e8bf45f80c4b0a22991e0b03fdf59908"
+  },
+  {
+   "type": "section",
+   "id": "tr2026.2.4",
+   "number": "2.4",
+   "title": "COLLARS",
+   "toc_title": "Collars",
+   "page": 9,
+   "content": [
+    {
+     "type": "clause",
+     "id": "tr2026.2.4.a",
+     "label": "(a)",
+     "label_kind": "alpha",
+     "page": 9,
+     "content": [
+      {
+       "type": "p",
+       "text": "Shall always be used.",
+       "page": 9,
+       "sha256": "081a02cc47c85f645a2b316f30243f909b6916049be31aeef70ad4d2694fc16d"
+      }
+     ],
+     "text": "Shall always be used.",
+     "sha256": "081a02cc47c85f645a2b316f30243f909b6916049be31aeef70ad4d2694fc16d"
+    },
+    {
+     "type": "clause",
+     "id": "tr2026.2.4.b",
+     "label": "(b)",
+     "label_kind": "alpha",
+     "page": 9,
+     "content": [
+      {
+       "type": "p",
+       "text": "Must weigh 2.5 kg each.",
+       "page": 9,
+       "sha256": "97892c314f72869051e803dac9f478102c9b4486199df6b2364bb675652c0069"
+      }
+     ],
+     "text": "Must weigh 2.5 kg each.",
+     "sha256": "97892c314f72869051e803dac9f478102c9b4486199df6b2364bb675652c0069"
+    }
+   ],
+   "text": "",
+   "sha256": "89991040cb8a6c60bba34039c75c86a82e11c668db9832444df93b7f46739ae0"
+  },
+  {
+   "type": "section",
+   "id": "tr2026.2.5",
+   "number": "2.5",
+   "title": "SQUAT RACKS",
+   "toc_title": "Squat racks",
+   "page": 9,
+   "content": [
+    {
+     "type": "clause",
+     "id": "tr2026.2.5.item-1",
+     "label": "1)",
+     "label_kind": "num",
+     "page": 9,
+     "content": [
+      {
+       "type": "p",
+       "text": "Only Squat Racks from commercial Manufacturers officially registered and approved by the Technical Committee shall be permitted for use in the International Powerlifting Championships.",
+       "page": 9,
+       "sha256": "082f28db069fcb75d3ac92b7273bd0989768e7f2dc35c502afe0eb017dde5395"
+      }
+     ],
+     "text": "Only Squat Racks from commercial Manufacturers officially registered and approved by the Technical Committee shall be permitted for use in the International Powerlifting Championships.",
+     "sha256": "082f28db069fcb75d3ac92b7273bd0989768e7f2dc35c502afe0eb017dde5395"
+    },
+    {
+     "type": "clause",
+     "id": "tr2026.2.5.item-2",
+     "label": "2)",
+     "label_kind": "num",
+     "page": 9,
+     "content": [
+      {
+       "type": "p",
+       "text": "The squat racks shall be designed to adjust from a minimum height of 1.00 m in the lowest position to extend to a height of at least 1.70 m in 2.5 cm increments.",
+       "page": 9,
+       "sha256": "2155bbbacf398cf8c8104295c3eaf29ef4e806d04626c6ae71517881d46158f8"
+      }
+     ],
+     "text": "The squat racks shall be designed to adjust from a minimum height of 1.00 m in the lowest position to extend to a height of at least 1.70 m in 2.5 cm increments.",
+     "sha256": "2155bbbacf398cf8c8104295c3eaf29ef4e806d04626c6ae71517881d46158f8"
+    },
+    {
+     "type": "clause",
+     "id": "tr2026.2.5.item-3",
+     "label": "3)",
+     "label_kind": "num",
+     "page": 9,
+     "content": [
+      {
+       "type": "p",
+       "text": "All racks must be capable of being secured at the required height by means of pins.",
+       "page": 9,
+       "sha256": "a87d7ac939ec0254eab1899f83d11685bfb5358b9adc9507a2a921d5daa7a757"
+      }
+     ],
+     "text": "All racks must be capable of being secured at the required height by means of pins.",
+     "sha256": "a87d7ac939ec0254eab1899f83d11685bfb5358b9adc9507a2a921d5daa7a757"
+    }
+   ],
+   "text": "",
+   "sha256": "d9f9523b6b87f71bf70ef22a754de45caff319c755dc1a6ef01790462b347512"
+  },
+  {
+   "type": "section",
+   "id": "tr2026.2.6",
+   "number": "2.6",
+   "title": "BENCH",
+   "toc_title": "Bench",
+   "page": 9,
+   "content": [
+    {
+     "type": "p",
+     "text": "Only Bench Racks and Benches from Commercial Manufacturers officially registered and approved by the Technical Committee shall be permitted for use in International Powerlifting Championships. The bench shall conform to the following dimensions:",
+     "page": 9,
+     "id": "tr2026.2.6.p1",
+     "sha256": "9dd32757e61cba867906e8013e8f3ab2147c8085d690229ce129fca696b27dd5"
+    },
+    {
+     "type": "li",
+     "text": "Length - not less than 1.22 m and shall be flat and level.",
+     "page": 9,
+     "sha256": "d1c2301f3c8fd564d7abec78ef52ceb792c3c869f11e328bfad142e8f1e912d0"
+    },
+    {
+     "type": "li",
+     "text": "Width - not less than 29 cm and not exceeding 32 cm.",
+     "page": 9,
+     "sha256": "4712d983e92b489611e41f07cb80e6f3c1473a435040889ced9d7c48b753c3cd"
+    },
+    {
+     "type": "li",
+     "text": "Height - not less than 42 cm and not exceeding 45 cm measured from the floor to the top of the padded surface of the bench without it being depressed or compacted. The height of the uprights, which must be adjustable, shall be a minimum of 75 cm to a maximum of 110 cm measured from the floor to the bar rest position.",
+     "page": 9,
+     "sha256": "48e132c58e24a4b77adf78a89de9d4d40a2d878a7b650be30535c6eff2f6d388"
+    },
+    {
+     "type": "li",
+     "text": "Minimum width between insides of bar rests shall be 1.10 m",
+     "page": 9,
+     "sha256": "8f9dd802e49e8055af731f84ba18a318c12a5b91d944431860d4500fb5dc0093"
+    },
+    {
+     "type": "li",
+     "text": "The head of the bench shall extend 22 cm beyond the center of the uprights with a tolerance of 5 cm either way.",
+     "page": 9,
+     "sha256": "ad3e6aac239f996c26011cd0a46a91c0930231a78f8ea00d72f0f67b9e890422"
+    },
+    {
+     "type": "li",
+     "text": "Attached safety stands must be used in all events. Minimum Height of Safety Racks shall be 50 cm, having 10 holes in increments of 2.5 cm and 50 cm in length.",
+     "page": 9,
+     "sha256": "09ec67925ce6e167b9b521fb06223bf3cc882ae0aa364160e8f27fcff804e80a"
+    }
+   ],
+   "text": "Only Bench Racks and Benches from Commercial Manufacturers officially registered and approved by the Technical Committee shall be permitted for use in International Powerlifting Championships. The bench shall conform to the following dimensions:\nLength - not less than 1.22 m and shall be flat and level.\nWidth - not less than 29 cm and not exceeding 32 cm.\nHeight - not less than 42 cm and not exceeding 45 cm measured from the floor to the top of the padded surface of the bench without it being depressed or compacted. The height of the uprights, which must be adjustable, shall be a minimum of 75 cm to a maximum of 110 cm measured from the floor to the bar rest position.\nMinimum width between insides of bar rests shall be 1.10 m\nThe head of the bench shall extend 22 cm beyond the center of the uprights with a tolerance of 5 cm either way.\nAttached safety stands must be used in all events. Minimum Height of Safety Racks shall be 50 cm, having 10 holes in increments of 2.5 cm and 50 cm in length.",
+   "sha256": "bb7480bce54659b77887ffd47117fe09fb4f2e0520309375d0f5815a5c450531"
+  },
+  {
+   "type": "section",
+   "id": "tr2026.2.7",
+   "number": "2.7",
+   "title": "CLOCKS",
+   "toc_title": "Clocks",
+   "page": 9,
+   "content": [
+    {
+     "type": "p",
+     "text": "Timing clocks visible to all (venue, platform, warm-up area) must be used which operate continuously up to a minimum of twenty minutes and display elapsed time. Additionally, a clock displaying time left in which to enter the next attempts should also be made visible to the coach or lifter.",
+     "page": 9,
+     "id": "tr2026.2.7.p1",
+     "sha256": "193400b4c5bb8fcdbe666ca2b4570fe862127c116620829601066e44a39d15df"
+    }
+   ],
+   "text": "Timing clocks visible to all (venue, platform, warm-up area) must be used which operate continuously up to a minimum of twenty minutes and display elapsed time. Additionally, a clock displaying time left in which to enter the next attempts should also be made visible to the coach or lifter.",
+   "sha256": "350a41031a9f1768dd421164a9c40d50523a4406c8b843b416ce1d6fc6c6f221"
+  },
+  {
+   "type": "section",
+   "id": "tr2026.2.8",
+   "number": "2.8",
+   "title": "LIGHTS",
+   "toc_title": "Lights",
+   "page": 10,
+   "content": [
+    {
+     "type": "p",
+     "text": "A system of lights shall be provided whereby the referees make known their decisions. Each referee will control a white and a red light. The white light indicates a “good lift,” and the red light indicates a “no lift.” The lights shall be arranged horizontally to correspond with the positions of the three referees. They must be wired or electronic/wireless in such a way that they light up together and not separately when activated by the three referees. For emergency purposes, i.e., a breakdown in the electrical system, the referees will be provided with small white or red flags or paddles with which to make known their decisions on the Chief Referee’s audible command “flags”.",
+     "page": 10,
+     "id": "tr2026.2.8.p1",
+     "sha256": "961fea9cd462057b66566a05ca758d3bef456adecad45569b6ea2340dd1bea4a"
+    }
+   ],
+   "text": "A system of lights shall be provided whereby the referees make known their decisions. Each referee will control a white and a red light. The white light indicates a “good lift,” and the red light indicates a “no lift.” The lights shall be arranged horizontally to correspond with the positions of the three referees. They must be wired or electronic/wireless in such a way that they light up together and not separately when activated by the three referees. For emergency purposes, i.e., a breakdown in the electrical system, the referees will be provided with small white or red flags or paddles with which to make known their decisions on the Chief Referee’s audible command “flags”.",
+   "sha256": "8b60e3bc56aa806b454d49387ebf5a9b74eee7aa1a8163dd2bc73975f01f333f"
+  },
+  {
+   "type": "section",
+   "id": "tr2026.2.9",
+   "number": "2.9",
+   "title": "FAILURE CARDS / PADDLES",
+   "toc_title": "Failure cards / Paddles",
+   "page": 10,
+   "content": [
+    {
+     "type": "p",
+     "text": "After the lights have been activated and appeared, the referee(s) shall raise a card or paddle, or activate the light system, to indicate the reason(s) for the failed lift.",
+     "page": 10,
+     "id": "tr2026.2.9.p1",
+     "sha256": "03029b28b665e27a345c48ec4c2de96464cd7ff7891af337096ab339e928a6f1"
+    },
+    {
+     "type": "p",
+     "text": "Referees numbered card system - reason for failure.",
+     "page": 10,
+     "id": "tr2026.2.9.p2",
+     "sha256": "a7e4d7363948bb0b5ae30f76adeae6d7c4a32b3738230f2ae7e4adf259a70353"
+    },
+    {
+     "type": "p",
+     "text": "Color of the cards:",
+     "page": 10,
+     "id": "tr2026.2.9.p3",
+     "sha256": "9c858bbbda0119f08dae4cfe290cfff629700cd46622d9e32c2100b1e75cb437"
+    },
+    {
+     "type": "line",
+     "text": "Failure no. 1 = red card",
+     "page": 10,
+     "id": "tr2026.2.9.p4",
+     "sha256": "a4d7ecb6eee8b27d7ac635a0e2dc83142ceae97292445264500d8a2cf63deed5"
+    },
+    {
+     "type": "line",
+     "text": "Failure no. 2 = blue card",
+     "page": 10,
+     "id": "tr2026.2.9.p5",
+     "sha256": "ea2f22176945f19d7e3660ea2553b5b35f7916e7990d51d06d4e5b3667ab8b38"
+    },
+    {
+     "type": "line",
+     "text": "Failure no. 3 = yellow card",
+     "page": 10,
+     "id": "tr2026.2.9.p6",
+     "sha256": "66c4879df4f71e99c99193cd251f1ec1b3d3fe4453e147a1205cee7a2cac3988"
+    },
+    {
+     "type": "failure-matrix",
+     "matrix": {
+      "RED": {
+       "SQUAT": [
+        "Failure to bend the knees and lower the body until the top surface of the legs at the hip joint is lower than the top of the knees."
+       ],
+       "BENCH PRESS": [
+        "Bar is not lowered to chest or abdominal area i.e., not reaching the chest or abdominal area, or is touching the belt.",
+        "Failure to lower the underside of both elbow joints level with or below the top surface of each respective shoulder joint"
+       ],
+       "DEADLIFT": [
+        "Failure to lock the knees straight at the completion of the lift.",
+        "The front bundle of the deltoid muscle should be placed behind the imaginary projection of the bar",
+        "Failure to stand erect"
+       ]
+      },
+      "BLUE": {
+       "SQUAT": [
+        "Failure to assume an upright position with the knees locked at the commencement and at the completion of the lift.",
+        "Double bouncing or more than one recovery attempt at the bottom of the lift or any downward movement during the ascent."
+       ],
+       "BENCH PRESS": [
+        "Any downward movement of the whole of the bar in the course of being pressed out.",
+        "Failure to press the bar to straight arm’s length elbows locked at the completion of the lift.",
+        "Failure to lock the arms before the “START” command."
+       ],
+       "DEADLIFT": [
+        "Any downward movement of the bar before it reaches the final position. If the bar settles as the shoulders come back this shall not be a reason for disqualification.",
+        "Supporting the bar on the thighs during the performance of the lift. If the bar edges up the thighs but is not supported, this is not reason for disqualification."
+       ]
+      },
+      "YELLOW": {
+       "SQUAT": [
+        "Stepping backward or forward or moving the feet laterally. Rocking the feet between the ball and heel is permitted.",
+        "Failure to observe the Chief Referees signals at the commencement or completion of the lift.",
+        "Contact with bar or lifter by the spotters/loaders between the Chief Referees’ signals, in order to make the lift easier.",
+        "Contact of elbows or upper arms with the legs, which has supported and been of aid to the lifter. Slight contact that is of no aid may be ignored.",
+        "Any dropping or dumping of the bar after completion of the lift.",
+        "Failure to comply with any of the requirements contained in the general description of the lift, which precedes this list of disqualification.",
+        "Incomplete lift"
+       ],
+       "BENCH PRESS": [
+        "Sinking the bar after it has been motionless on the chest or abdominal area, in such a way as to aid the lifter.",
+        "Failure to observe the Chief Referees signals at the commencement, during or completion of the lift.",
+        "Utilizing upper body thrust to initiate upward movement of the bar from the chest.",
+        "Any change in the elected lifting position during the lift proper, i.e., any raising movement of the head, shoulders, or buttocks from their original points of contact with the bench, or lateral movement of the hands on the bar.",
+        "Contact with the bar or the lifter by the spotters/ loaders between the Chief Referees signals, in order to make the lift easier.",
+        "Any contact of the lifter’s feet with the bench or its supports. Deliberate contact between the bar and the bar rest supports during the lift in order to make the lift easier.",
+        "Failure to comply with any of the requirements contained in the general description of the lift, which precedes this list of disqualification.",
+        "Incomplete lift"
+       ],
+       "DEADLIFT": [
+        "Lowering the bar before receiving the Chief Referees signal.",
+        "Allowing the bar to return to the platform without maintaining control with both hands, i.e. releasing the bar from the palms of the hand.",
+        "Stepping backward or forward or moving the feet laterally. Rocking the feet between the ball and heel is permitted. Foot movement after the command “Down” will not be cause for failure.",
+        "Failure to comply with any of the requirements contained in the general description of the lift, which precedes this list of disqualification.",
+        "Incomplete lift"
+       ]
+      }
+     },
+     "labels": [
+      "SQUAT",
+      "BENCH PRESS",
+      "DEADLIFT",
+      "SQUAT",
+      "BENCH PRESS",
+      "DEADLIFT",
+      "1.RED",
+      "2.BLUE",
+      "3.YELLOW"
+     ],
+     "status": null,
+     "id": "tr2026.2.9.matrix1",
+     "page": 10,
+     "sha256": "b7cf0d6947de7378d8148827f6bf440b61d8b7647c8f3490374c792744f45843"
+    }
+   ],
+   "text": "After the lights have been activated and appeared, the referee(s) shall raise a card or paddle, or activate the light system, to indicate the reason(s) for the failed lift.\nReferees numbered card system - reason for failure.\nColor of the cards:\nFailure no. 1 = red card\nFailure no. 2 = blue card\nFailure no. 3 = yellow card",
+   "sha256": "f20b681c542801b727f3a6ccfc8790f6f4becfe09bd1589337bb9f5b963c9c44"
+  },
+  {
+   "type": "section",
+   "id": "tr2026.2.10",
+   "number": "2.10",
+   "title": "SCOREBOARD",
+   "toc_title": "Scoreboard",
+   "page": 12,
+   "content": [
+    {
+     "type": "p",
+     "text": "A clearly visible and detailed scoreboard must be provided for spectators, officials, and all parties involved in the competition. The lifters names should be arranged by lot numbers for each session. The current record must be displayed and up-dated as necessary",
+     "page": 12,
+     "id": "tr2026.2.10.p1",
+     "sha256": "846993c48d037d42b3d92b78270c44c4c1ec451c8b372e86b31546c8cee484d2"
+    },
+    {
+     "type": "figure",
+     "caption": "CHAMPIONSHIPS SCOREBOARD",
+     "status": "needs-redraw",
+     "kind": "scoreboard-template",
+     "labels": [
+      "GROUP:",
+      "SQUAT",
+      "BENCH PRESS",
+      "DEADLIFT",
+      "LOT",
+      "NAME",
+      "NAT",
+      "BD/ WT",
+      "RD1",
+      "RD2",
+      "RD3",
+      "RD1",
+      "RD2",
+      "RD3",
+      "SUB TOT",
+      "RD1",
+      "RD2",
+      "RD3",
+      "TOT",
+      "PLACE",
+      "1",
+      "2",
+      "3",
+      "..",
+      "14"
+     ],
+     "pdf_page": 12,
+     "id": "tr2026.2.10.fig1",
+     "page": 12,
+     "sha256": "026e966c7c3ea11e29b03ddad9c2a9de8dbf74eb9b030130791d8d1dbfbcb4d2"
+    }
+   ],
+   "text": "A clearly visible and detailed scoreboard must be provided for spectators, officials, and all parties involved in the competition. The lifters names should be arranged by lot numbers for each session. The current record must be displayed and up-dated as necessary",
+   "sha256": "d61b1a0fa4d0b64ed669203c505304fbff4b4e22a05daef83d98b3cfdd33d31b"
+  }
+ ],
+ "text": "",
+ "sha256": "4c228cbdafb4bd701c2104b7db1b90a5cd9649e03d408fc8ffab5b4e46304785"
+}

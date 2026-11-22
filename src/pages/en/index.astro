@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import { chapters, display } from '../../lib/content';
+---
+<Base title="powerlifting.digital" current="/en/">
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Technical</p>
+      <h1>Rulebook</h1>
+      <p class="lede">The IPF Technical Rules, unofficial digital edition. Every rule has its own address you can share, quote and print.</p>
+      <form class="searchbox" action="/en/search/" method="get" role="search">
+        <label class="vh" for="q">Search the rulebook, or type a rule number such as 4.2.1</label>
+        <input id="q" name="q" type="search" placeholder="Search, or jump to a rule number like 4.2.1" autocomplete="off" />
+        <button class="btn" type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+  <div class="wrap">
+    <div class="notice">
+      <p><strong>Unofficial.</strong> This site is an independent companion to the 2026 IPF Technical Rulebook (effective 1 March 2026). It is not produced or endorsed by the IPF. The wording of every rule is kept exactly as published, and where anything here differs from the IPF's English text, the English text prevails.</p>
+    </div>
+    <h2>Chapters</h2>
+    <ol class="big-index">
+      {chapters.map((c) => <li><a href={`/en/2026/${c.number}/`}><span class="n">{c.number}</span><span class="t">{display(c.toc_title ?? c.title!)}</span></a></li>)}
+    </ol>
+    <p>New to this? <a href="/en/about/">How the site treats the rule text</a> · <a href="/en/changes/">What is marked as changed in 2026</a></p>
+  </div>
+</Base>

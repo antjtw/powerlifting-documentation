@@ -1,0 +1,635 @@
+{
+ "type": "chapter",
+ "id": "tr2026.1",
+ "number": "1",
+ "title": "GENERAL RULES OF POWERLIFTING",
+ "toc_title": "GENERAL RULES OF POWERLIFTING",
+ "title_source": "contents",
+ "page": 4,
+ "content": [
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-1",
+   "label": "1)",
+   "label_kind": "num",
+   "page": 4,
+   "content": [
+    {
+     "type": "p",
+     "text": "Throughout this rulebook, for reasons of brevity, wherever the words “he” or “his” occur, such reference is deemed to apply to either sex. All references to gender shall ensure equal rights for both sexes and shall not present women as requiring separate rules unless explicitly necessary. In competitions in which both sexes are competing",
+     "page": 4,
+     "sha256": "b73c12125a417a9d3eac4095eb2609111795cad30ce9c62ad61f79497a1efaa4"
+    },
+    {
+     "type": "clause",
+     "id": "tr2026.1.item-1.a",
+     "label": "(a)",
+     "label_kind": "alpha",
+     "page": 4,
+     "content": [
+      {
+       "type": "p",
+       "text": "The International Powerlifting Federation recognizes the following lifts which must be taken in the same sequence in all competitions conducted under IPF rules:",
+       "page": 4,
+       "sha256": "d02267a62d20b2fe9345cd7538c76eab4c094f39cb8225098aebae039644c362"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.1.item-1.a.pt-a",
+       "label": "A.",
+       "label_kind": "sub",
+       "page": 4,
+       "content": [
+        {
+         "type": "p",
+         "text": "Squat",
+         "page": 4,
+         "sha256": "87af5781c013f70a04f663905f0b2e3f2a0e39159242fc02f35cec91fbbd3229"
+        }
+       ],
+       "text": "Squat",
+       "sha256": "87af5781c013f70a04f663905f0b2e3f2a0e39159242fc02f35cec91fbbd3229"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.1.item-1.a.pt-b",
+       "label": "B.",
+       "label_kind": "sub",
+       "page": 4,
+       "content": [
+        {
+         "type": "p",
+         "text": "Bench Press",
+         "page": 4,
+         "sha256": "80e59534c87e2a38669143017ae26a1b178c79b84bf8f2ce0990928e26399047"
+        }
+       ],
+       "text": "Bench Press",
+       "sha256": "80e59534c87e2a38669143017ae26a1b178c79b84bf8f2ce0990928e26399047"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.1.item-1.a.pt-c",
+       "label": "C.",
+       "label_kind": "sub",
+       "page": 4,
+       "content": [
+        {
+         "type": "p",
+         "text": "Deadlift",
+         "page": 4,
+         "sha256": "33cabc523b02ac655a47d9231236345cd01e63a8e16faae534482f69b5b48994"
+        }
+       ],
+       "text": "Deadlift",
+       "sha256": "33cabc523b02ac655a47d9231236345cd01e63a8e16faae534482f69b5b48994"
+      },
+      {
+       "type": "clause",
+       "id": "tr2026.1.item-1.a.pt-d",
+       "label": "D.",
+       "label_kind": "sub",
+       "page": 4,
+       "content": [
+        {
+         "type": "p",
+         "text": "Total",
+         "page": 4,
+         "sha256": "c9b3c38247f744e17dd26fda097d6a9ba9332586b6bdaa038bf8f313a863f2b8"
+        }
+       ],
+       "text": "Total",
+       "sha256": "c9b3c38247f744e17dd26fda097d6a9ba9332586b6bdaa038bf8f313a863f2b8"
+      }
+     ],
+     "text": "The International Powerlifting Federation recognizes the following lifts which must be taken in the same sequence in all competitions conducted under IPF rules:",
+     "sha256": "d02267a62d20b2fe9345cd7538c76eab4c094f39cb8225098aebae039644c362"
+    },
+    {
+     "type": "clause",
+     "id": "tr2026.1.item-1.b",
+     "label": "(b)",
+     "label_kind": "alpha",
+     "page": 4,
+     "content": [
+      {
+       "type": "p",
+       "text": "Competition takes place between lifters in categories defined by sex, body weight and age. The Men’s and Women’s Open Championships permit lifters from 1 January in the calendar year he/she reaches 19 years and upwards.",
+       "page": 4,
+       "sha256": "6513e2021f0bcf5bc6e7965f82273285d218a73d556dbe781281024f448c9437"
+      }
+     ],
+     "text": "Competition takes place between lifters in categories defined by sex, body weight and age. The Men’s and Women’s Open Championships permit lifters from 1 January in the calendar year he/she reaches 19 years and upwards.",
+     "sha256": "6513e2021f0bcf5bc6e7965f82273285d218a73d556dbe781281024f448c9437"
+    },
+    {
+     "type": "clause",
+     "id": "tr2026.1.item-1.c",
+     "label": "(c)",
+     "label_kind": "alpha",
+     "page": 4,
+     "content": [
+      {
+       "type": "p",
+       "text": "In the event of a Powerlifting or Bench Press Championships being combined e.g. with a Sub- Junior, Junior Open & Master's Championships having both Classic (1 category) and Equipped (1 category), a lifter has the option of competing in both Championships. The athlete shall be required to pay the entry fee for both championships and will be required to compete twice. No lifter is allowed to compete 2 times in Classic or 2 times in Equipped. Masters 3 and 4 are not permitted to compete in the Open Class. Once the athlete is entered on the Preliminary Nomination, he/she may not change their age division. The lifter may only change the weight class on the Final Nomination.",
+       "page": 4,
+       "sha256": "87666e3ea9ccfbc5edcfa251277bfc090e02e843402bc179ff14317cdd3a1bdc"
+      }
+     ],
+     "text": "In the event of a Powerlifting or Bench Press Championships being combined e.g. with a Sub- Junior, Junior Open & Master's Championships having both Classic (1 category) and Equipped (1 category), a lifter has the option of competing in both Championships. The athlete shall be required to pay the entry fee for both championships and will be required to compete twice. No lifter is allowed to compete 2 times in Classic or 2 times in Equipped. Masters 3 and 4 are not permitted to compete in the Open Class. Once the athlete is entered on the Preliminary Nomination, he/she may not change their age division. The lifter may only change the weight class on the Final Nomination.",
+     "sha256": "87666e3ea9ccfbc5edcfa251277bfc090e02e843402bc179ff14317cdd3a1bdc"
+    },
+    {
+     "type": "clause",
+     "id": "tr2026.1.item-1.d",
+     "label": "(d)",
+     "label_kind": "alpha",
+     "page": 4,
+     "content": [
+      {
+       "type": "p",
+       "text": "The rules apply to all levels of competition.",
+       "page": 4,
+       "sha256": "6e90f4a6f2599ae271dca69985137c26c66d58a437a2820a376fd06e542eb788"
+      }
+     ],
+     "text": "The rules apply to all levels of competition.",
+     "sha256": "6e90f4a6f2599ae271dca69985137c26c66d58a437a2820a376fd06e542eb788"
+    },
+    {
+     "type": "clause",
+     "id": "tr2026.1.item-1.e",
+     "label": "(e)",
+     "label_kind": "alpha",
+     "page": 4,
+     "content": [
+      {
+       "type": "p",
+       "text": "Each competitor is allowed three attempts on each lift. The lifter’s best valid attempt on each lift counts toward his competition total. If two or more lifters achieve the same total, the lighter lifter ranks above the heavier lifter.",
+       "page": 4,
+       "sha256": "59128630df4cb3cadc3bc555176676653b9813671b79c0eb36e6129b4f067b19"
+      }
+     ],
+     "text": "Each competitor is allowed three attempts on each lift. The lifter’s best valid attempt on each lift counts toward his competition total. If two or more lifters achieve the same total, the lighter lifter ranks above the heavier lifter.",
+     "sha256": "59128630df4cb3cadc3bc555176676653b9813671b79c0eb36e6129b4f067b19"
+    },
+    {
+     "type": "clause",
+     "id": "tr2026.1.item-1.f",
+     "label": "(f)",
+     "label_kind": "alpha",
+     "page": 4,
+     "content": [
+      {
+       "type": "p",
+       "text": "If two lifters register the same body weight at the weigh in and eventually achieve the same total at the end of the competition, the lifter making the total first will take precedence over the other lifter. Where awards are presented for best squat, bench press and deadlift or if a world record is broken, the same procedure will apply.",
+       "page": 4,
+       "sha256": "ee450114194103f542e3fbba84e4c664b5dfa338d14e105b03a74b2afd693f00"
+      }
+     ],
+     "text": "If two lifters register the same body weight at the weigh in and eventually achieve the same total at the end of the competition, the lifter making the total first will take precedence over the other lifter. Where awards are presented for best squat, bench press and deadlift or if a world record is broken, the same procedure will apply.",
+     "sha256": "ee450114194103f542e3fbba84e4c664b5dfa338d14e105b03a74b2afd693f00"
+    }
+   ],
+   "text": "Throughout this rulebook, for reasons of brevity, wherever the words “he” or “his” occur, such reference is deemed to apply to either sex. All references to gender shall ensure equal rights for both sexes and shall not present women as requiring separate rules unless explicitly necessary. In competitions in which both sexes are competing",
+   "sha256": "b73c12125a417a9d3eac4095eb2609111795cad30ce9c62ad61f79497a1efaa4"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-2",
+   "label": "2)",
+   "label_kind": "num",
+   "page": 4,
+   "content": [
+    {
+     "type": "p",
+     "text": "The IPF, through its member federations, conducts and sanctions the following World Championships. The major events on the IPF calendar are as follows:",
+     "page": 4,
+     "sha256": "48e2dbb9a3bcd798fd283f6657bd9915926b261a8914b41d463aa2e4163507da"
+    },
+    {
+     "type": "li",
+     "text": "Equipped World Open Powerlifting Championship",
+     "page": 4,
+     "sha256": "a38b536f9fb0940839b141d2fcd86e2b9d98bd4962b32fdef3387ddf0d2600c9"
+    },
+    {
+     "type": "li",
+     "text": "Equipped World Sub-Junior and Junior Powerlifting Championship",
+     "page": 4,
+     "sha256": "8d5112f348578d7e0f43104d6056ec22af34c13f2e6bffed9da813b1c46e7b2a"
+    },
+    {
+     "type": "li",
+     "text": "Equipped World Masters Powerlifting Championship",
+     "page": 4,
+     "sha256": "a73452ff2acc0bc78f256a00386479e5fa22cb955bac26d2cdc626585ed26fb9"
+    },
+    {
+     "type": "li",
+     "text": "Equipped World Bench Press Championship (Open, Sub-Junior/Junior and Master)",
+     "page": 4,
+     "sha256": "3ef54dc89f20efdc283c64f4a7c48c5e9d5ed50ac4b688cc81c8d6dabda50409"
+    },
+    {
+     "type": "li",
+     "text": "Classic World Open Powerlifting Championship",
+     "page": 4,
+     "sha256": "d23d67895f23b4dd7a35210701f89d72641ae1049defe5eba31bc40cc9d82fb9"
+    },
+    {
+     "type": "li",
+     "text": "Classic World Sub-Junior and Junior Powerlifting Championship",
+     "page": 4,
+     "sha256": "0895d53f3b76f04dc93fec27b04509fffa3346e2a4f8c87a2429f6636a61a381"
+    },
+    {
+     "type": "li",
+     "text": "Classic World Masters Powerlifting Championship",
+     "page": 4,
+     "sha256": "82a832768dac979d1bfcaa7bcc934eb02988601505937826cca56bc3703ff104"
+    },
+    {
+     "type": "li",
+     "text": "Classic World Bench Press Championship (Open, Sub-Junior/Junior and Master)",
+     "page": 4,
+     "sha256": "0b81d3624b7c58cf159c92ab12147d208e5214c55d7369d06f53917db0d2fcbf"
+    },
+    {
+     "type": "li",
+     "text": "University World Cup",
+     "page": 4,
+     "sha256": "b89fec71c9f97675061f810df3ad40ce81492028224f49d5195e45047d403868"
+    },
+    {
+     "type": "li",
+     "text": "Other international events as approved by the EC.",
+     "page": 4,
+     "sha256": "007555165bda3180ba5459f41b4186e71bae41db7a4e166241dea578a1092ccc"
+    },
+    {
+     "type": "p",
+     "text": "The Championship Secretary, in consult with the Executive Committee, shall ensure that major international events do not clash. If necessary, sanction(s) may be refused to achieve an orderly Calendar. If necessary, the events on the Calendar may be combined into one championship.",
+     "page": 5,
+     "sha256": "4757e773a561e6528091d4e0b8a8044ebd67ab55d51b4e7a8bb0d3ecbdcee302"
+    }
+   ],
+   "text": "The IPF, through its member federations, conducts and sanctions the following World Championships. The major events on the IPF calendar are as follows:\nEquipped World Open Powerlifting Championship\nEquipped World Sub-Junior and Junior Powerlifting Championship\nEquipped World Masters Powerlifting Championship\nEquipped World Bench Press Championship (Open, Sub-Junior/Junior and Master)\nClassic World Open Powerlifting Championship\nClassic World Sub-Junior and Junior Powerlifting Championship\nClassic World Masters Powerlifting Championship\nClassic World Bench Press Championship (Open, Sub-Junior/Junior and Master)\nUniversity World Cup\nOther international events as approved by the EC.\nThe Championship Secretary, in consult with the Executive Committee, shall ensure that major international events do not clash. If necessary, sanction(s) may be refused to achieve an orderly Calendar. If necessary, the events on the Calendar may be combined into one championship.",
+   "sha256": "f70c09b15589ff140500d2497b3a7dee3b520a6cb4d338f70650195f257c067f"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-3",
+   "label": "3)",
+   "label_kind": "num",
+   "page": 5,
+   "content": [
+    {
+     "type": "p",
+     "text": "The IPF also recognizes and registers world records for the same lifts within the categories described hereunder:",
+     "page": 5,
+     "sha256": "a48774ae09b93f754e72264570a9e0def4c0683babcb38cf22aecf6e3c3f2c68"
+    }
+   ],
+   "text": "The IPF also recognizes and registers world records for the same lifts within the categories described hereunder:",
+   "sha256": "a48774ae09b93f754e72264570a9e0def4c0683babcb38cf22aecf6e3c3f2c68"
+  },
+  {
+   "type": "section",
+   "id": "tr2026.1.1",
+   "number": "1.1",
+   "title": "AGE CATEGORIES",
+   "toc_title": "Age categories",
+   "page": 5,
+   "content": [
+    {
+     "type": "table",
+     "caption": "1.1. AGE CATEGORIES",
+     "header": [
+      "MEN & WOMEN",
+      ""
+     ],
+     "rows": [
+      [
+       "OPEN",
+       "from 1 January in the calendar year, he/she reaches 19 years and upwards"
+      ],
+      [
+       "SUB-JUNIORS",
+       "from the day he/she reaches 14 years and throughout the full calendar year in which he/she reaches 18 years of age."
+      ],
+      [
+       "JUNIORS",
+       "from 1 January in the calendar year, he/she reaches 19 years and throughout the full calendar year in which he/she reaches 23 years of age."
+      ],
+      [
+       "MASTER 1",
+       "from 1 January in the calendar year, he/she reaches 40 years and throughout the full calendar year in which he/she reaches 49 years of age."
+      ],
+      [
+       "MASTER 2",
+       "from 1 January in the calendar year, he/she reaches 50 years and throughout the full calendar year in which he/she reaches 59 years of age."
+      ],
+      [
+       "MASTER 3",
+       "from 1 January in the calendar year, he/she reaches 60 years and throughout the full calendar year in which he/she reaches 69 years of age."
+      ],
+      [
+       "MASTER 4",
+       "from 1 January in the calendar year, he/she reaches 70 years and upwards."
+      ]
+     ],
+     "kind": "age-categories",
+     "status": null,
+     "id": "tr2026.1.1.table1",
+     "page": 5,
+     "sha256": "314f5094cf1d33bc27a8381336b2e33a405aa758efc3783be83c13580d6cef2c"
+    },
+    {
+     "type": "p",
+     "text": "Competitive lifting for lifters below the age of 14 is only allowed at National competitions.",
+     "page": 5,
+     "id": "tr2026.1.1.p1",
+     "sha256": "7d5da7e3fca3c4ff633d80b0dee21a5bf7ea701461a7051bd832c1c41dce61f8"
+    }
+   ],
+   "text": "Competitive lifting for lifters below the age of 14 is only allowed at National competitions.",
+   "sha256": "e83d6c4f6b7a192f0530f1dad0251b853102fe1e4dc18d793de6e324cc14a70f"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-4",
+   "label": "4)",
+   "label_kind": "num",
+   "page": 5,
+   "content": [
+    {
+     "type": "p",
+     "text": "Placing for all age groupings shall be determined by the totals of the lifters in accordance with the standard rules of lifting. Medals for 1st, 2nd, and 3rd place shall be awarded In each weight class across all age divisions..",
+     "page": 5,
+     "sha256": "fa568b83ece1b5232c68e380423f8d3f285e0ef1323f209627e66a8a6f7e01eb"
+    }
+   ],
+   "text": "Placing for all age groupings shall be determined by the totals of the lifters in accordance with the standard rules of lifting. Medals for 1st, 2nd, and 3rd place shall be awarded In each weight class across all age divisions..",
+   "sha256": "fa568b83ece1b5232c68e380423f8d3f285e0ef1323f209627e66a8a6f7e01eb"
+  },
+  {
+   "type": "section",
+   "id": "tr2026.1.2",
+   "number": "1.2",
+   "title": "BODYWEIGHT CATEGORIES",
+   "toc_title": "Bodyweight categories",
+   "page": 5,
+   "content": [
+    {
+     "type": "table",
+     "caption": "1.2. BODYWEIGHT CATEGORIES",
+     "header": [
+      "MEN",
+      "WOMEN"
+     ],
+     "rows": [
+      [
+       "Sub-Junior & Junior only-up to 53.0 kg",
+       "Sub-Junior & Junior only-up to 43.0 kg"
+      ],
+      [
+       "59.0 kg Class up to 59.0 kg",
+       "47.0 kg Class up to 47.0 kg"
+      ],
+      [
+       "66.0 kg Class from 59.01 kg up to 66.0 kg",
+       "52.0 kg Class from 47.01 kg up to 52.0 kg"
+      ],
+      [
+       "74.0 kg Class from 66.01 kg up to 74.0 kg",
+       "57.0 kg Class from 52.01 kg up to 57.0 kg"
+      ],
+      [
+       "83.0 kg Class from 74.01 kg up to 83.0 kg",
+       "63.0 kg Class from 57.01 kg up to 63.0 kg"
+      ],
+      [
+       "93.0 kg Class from 83.01 kg up to 93.0 kg",
+       "69.0 kg Class from 63.01 kg up to 69.0 kg"
+      ],
+      [
+       "105.0 kg Class from 93.01 kg up to 105.0 kg",
+       "76.0 kg Class from 69.01 kg up to 76.0 kg"
+      ],
+      [
+       "120.0 kg Class from 105.01 kg up to 120.0 kg",
+       "84.0 kg Class from 76.01 kg up to 84.0 kg"
+      ],
+      [
+       "120.0+ kg Class from 120.01 kg up to unlimited",
+       "84.0+ kg Class from 84.01 kg up to unlimited"
+      ]
+     ],
+     "kind": "weight-classes",
+     "status": null,
+     "id": "tr2026.1.2.table1",
+     "page": 5,
+     "sha256": "2f7bdb5ca09572a9238b0a370443ff19e0f80f2ad9f5b657952aaa8877f74155"
+    }
+   ],
+   "text": "",
+   "sha256": "ba1399018130c5786a6d34b3d1712b44b7691a753940aa1279293dfdf5dcc5d3"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-5",
+   "label": "5)",
+   "label_kind": "num",
+   "page": 6,
+   "content": [
+    {
+     "type": "p",
+     "text": "Each nation is allowed a maximum of eight (8) competitors spread throughout the range of the eight (8) bodyweight categories for men and eight (8) competitors throughout the range of eight (8) bodyweight categories for women. In the Junior and Sub-Junior age categories nine (9) for men and nine (9) for women. There must not be more than two competitors from any one nation in any particular bodyweight category.",
+     "page": 6,
+     "sha256": "529fb65a6efd200291945ff703157847925b988204522d4dbee283fd4379e470"
+    }
+   ],
+   "text": "Each nation is allowed a maximum of eight (8) competitors spread throughout the range of the eight (8) bodyweight categories for men and eight (8) competitors throughout the range of eight (8) bodyweight categories for women. In the Junior and Sub-Junior age categories nine (9) for men and nine (9) for women. There must not be more than two competitors from any one nation in any particular bodyweight category.",
+   "sha256": "529fb65a6efd200291945ff703157847925b988204522d4dbee283fd4379e470"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-6",
+   "label": "6)",
+   "label_kind": "num",
+   "page": 6,
+   "content": [
+    {
+     "type": "p",
+     "text": "Each nation is allowed a maximum of five alternates or reserves. To take part in the competition they must have been nominated 60 days before the date of the championships on the preliminary nomination with the bodyweight categories and best totals achieved at National or international championships during the last 12 months.",
+     "page": 6,
+     "sha256": "72ebb55e22ce60c7a32c23558dfef6bf925b84d4696e01ea2b3363a5604fc07c"
+    }
+   ],
+   "text": "Each nation is allowed a maximum of five alternates or reserves. To take part in the competition they must have been nominated 60 days before the date of the championships on the preliminary nomination with the bodyweight categories and best totals achieved at National or international championships during the last 12 months.",
+   "sha256": "72ebb55e22ce60c7a32c23558dfef6bf925b84d4696e01ea2b3363a5604fc07c"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-7",
+   "label": "7)",
+   "label_kind": "num",
+   "page": 6,
+   "content": [
+    {
+     "type": "p",
+     "text": "Each Nation must submit a team roster giving the name of each lifter and his/her body weight category. Best totals from National or International Championships during the previous 12 months shall be stated. This may include his/her result achieved at last year’s International Championships in the same bodyweight category. The date and title of the competition in which the total was achieved must also be stated. These details must be submitted to the Championship Secretary of the IPF or of the Region and also to the Meet Director at least 60 days before the date of the Championships on the preliminary nomination. Final selection, submitted not later than 21 days before the date of the Championship, must be made from those nominated 60 days before the date of the Championships. This includes reserve or alternate lifters. At this point in time each lifter must nominate the bodyweight category in which they wish to lift in these Championships. After the final selection (final nomination) no changes in the weight category in which the lifter is nominated will be allowed. Nominated lifters without results from any of the above Championships will be ranked in the first lifting group if his/her bodyweight category is divided into multiple groups. Failure to comply with any of these requirements may result in disqualification of the offending team. A lifter cannot produce a qualifying total via his national federation for entry to World, International or Regional Championships while he is under suspension by the IPF or Region.",
+     "page": 6,
+     "sha256": "b7b24f2869e162ac66735d77469d4232cc78d95ff4dd38f0736d07fab6bd9d15"
+    }
+   ],
+   "text": "Each Nation must submit a team roster giving the name of each lifter and his/her body weight category. Best totals from National or International Championships during the previous 12 months shall be stated. This may include his/her result achieved at last year’s International Championships in the same bodyweight category. The date and title of the competition in which the total was achieved must also be stated. These details must be submitted to the Championship Secretary of the IPF or of the Region and also to the Meet Director at least 60 days before the date of the Championships on the preliminary nomination. Final selection, submitted not later than 21 days before the date of the Championship, must be made from those nominated 60 days before the date of the Championships. This includes reserve or alternate lifters. At this point in time each lifter must nominate the bodyweight category in which they wish to lift in these Championships. After the final selection (final nomination) no changes in the weight category in which the lifter is nominated will be allowed. Nominated lifters without results from any of the above Championships will be ranked in the first lifting group if his/her bodyweight category is divided into multiple groups. Failure to comply with any of these requirements may result in disqualification of the offending team. A lifter cannot produce a qualifying total via his national federation for entry to World, International or Regional Championships while he is under suspension by the IPF or Region.",
+   "sha256": "b7b24f2869e162ac66735d77469d4232cc78d95ff4dd38f0736d07fab6bd9d15"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-8",
+   "label": "8)",
+   "label_kind": "num",
+   "page": 6,
+   "content": [
+    {
+     "type": "p",
+     "text": "Point scoring for all World, Continental and Regional Championships shall be: 12, 9, 8, 7, 6, 5, 4, 3, and 2 points for the first nine places in any bodyweight category. Thereafter, each lifter who makes a total in the competition shall be awarded one point. Point scoring for all national competitions shall be at the discretion of the national federation.",
+     "page": 6,
+     "sha256": "85787c5002e3e4dc3f9f5e259a7dd4c3ea6c4c40468fec59a30a57dc3399ee00"
+    }
+   ],
+   "text": "Point scoring for all World, Continental and Regional Championships shall be: 12, 9, 8, 7, 6, 5, 4, 3, and 2 points for the first nine places in any bodyweight category. Thereafter, each lifter who makes a total in the competition shall be awarded one point. Point scoring for all national competitions shall be at the discretion of the national federation.",
+   "sha256": "85787c5002e3e4dc3f9f5e259a7dd4c3ea6c4c40468fec59a30a57dc3399ee00"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-9",
+   "label": "9)",
+   "label_kind": "num",
+   "page": 6,
+   "content": [
+    {
+     "type": "p",
+     "text": "Only the point scores of the five best placed lifters of each nation will be counted for the team competition at all international championships. In case of a tie in points scored, final team placing shall be decided for team awards as in item 11. If a member of a team is found to have committed a violation of the IPF Anti-Doping Rules during an Event where a team ranking is based on the addition of individual results (points), the points of the Athlete committing the violation will be subtracted from the team result and may not be repeated by the resulting points of another team member.",
+     "page": 6,
+     "sha256": "4582be5acd6827a56571dd1eb03b4cca84b027ae3a71732df05a9a650b275b06"
+    }
+   ],
+   "text": "Only the point scores of the five best placed lifters of each nation will be counted for the team competition at all international championships. In case of a tie in points scored, final team placing shall be decided for team awards as in item 11. If a member of a team is found to have committed a violation of the IPF Anti-Doping Rules during an Event where a team ranking is based on the addition of individual results (points), the points of the Athlete committing the violation will be subtracted from the team result and may not be repeated by the resulting points of another team member.",
+   "sha256": "4582be5acd6827a56571dd1eb03b4cca84b027ae3a71732df05a9a650b275b06"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-10",
+   "label": "10)",
+   "label_kind": "num",
+   "page": 6,
+   "content": [
+    {
+     "type": "p",
+     "text": "Any nation having been a member of the IPF for more than three years should include at least one international referee among its team officials at World Championships. If a referee from that nation is not present or, if present, makes himself unavailable to act in the capacity of either referee or member for jury during the championships, then only the four best placed lifters from that nation will be counted for the team competition.",
+     "page": 6,
+     "sha256": "66878bb089f3da54268be624ddf88e055bcfc1c97c809ef2121b8f6d6e077fe1"
+    }
+   ],
+   "text": "Any nation having been a member of the IPF for more than three years should include at least one international referee among its team officials at World Championships. If a referee from that nation is not present or, if present, makes himself unavailable to act in the capacity of either referee or member for jury during the championships, then only the four best placed lifters from that nation will be counted for the team competition.",
+   "sha256": "66878bb089f3da54268be624ddf88e055bcfc1c97c809ef2121b8f6d6e077fe1"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-11",
+   "label": "11)",
+   "label_kind": "num",
+   "page": 6,
+   "content": [
+    {
+     "type": "p",
+     "text": "Team awards shall be given for the first three places with Medals, 5 Gold to the Best Team, 5 Silver to the 2nd Best Team and 5 Bronze to the 3rd Best Team. In the case of a tie for the classification of a team or a nation, the team having the largest number of first places will be ranked first.",
+     "page": 6,
+     "sha256": "dd8972f2916ad14c46a391aab5911466102eb2cab25105dd67e928ff94e82ae8"
+    },
+    {
+     "type": "p",
+     "text": "In the case of a tie between two nations having the same number of first places, the one having the most second places will be classified first, and so on through the placing of the maximum of five scoring lifters. Should teams or Nations finish equally after this procedure has been applied, then the team or Nation with the greater total number of IPF points will be declared the higher placed. Teams with less than 3 lifters will not receive medals.",
+     "page": 7,
+     "sha256": "c9be330fb39d6935e2ff335571013ef2665e2a8cf4cf6e28dfab2ca51dcbc0fc"
+    }
+   ],
+   "text": "Team awards shall be given for the first three places with Medals, 5 Gold to the Best Team, 5 Silver to the 2nd Best Team and 5 Bronze to the 3rd Best Team. In the case of a tie for the classification of a team or a nation, the team having the largest number of first places will be ranked first.\nIn the case of a tie between two nations having the same number of first places, the one having the most second places will be classified first, and so on through the placing of the maximum of five scoring lifters. Should teams or Nations finish equally after this procedure has been applied, then the team or Nation with the greater total number of IPF points will be declared the higher placed. Teams with less than 3 lifters will not receive medals.",
+   "sha256": "24ab9d05df41e727508548a467cb70a2d8723b87432dbf0adb995a684f416739"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-12",
+   "label": "12)",
+   "label_kind": "num",
+   "page": 7,
+   "content": [
+    {
+     "type": "p",
+     "text": "At all IPF Championships a “Best lifter” award shall be given to the lifter who produces the best performance based upon the IPF formula. Awards will also be presented to second and third places. Categories with less than 3 Lifters will not receive any “Best Lifter” awards.",
+     "page": 7,
+     "sha256": "b66ce91366704138fdba987371566b3fb01ff89b99a0f788aae7ac4d46b93deb"
+    }
+   ],
+   "text": "At all IPF Championships a “Best lifter” award shall be given to the lifter who produces the best performance based upon the IPF formula. Awards will also be presented to second and third places. Categories with less than 3 Lifters will not receive any “Best Lifter” awards.",
+   "sha256": "b66ce91366704138fdba987371566b3fb01ff89b99a0f788aae7ac4d46b93deb"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-13",
+   "label": "13)",
+   "label_kind": "num",
+   "page": 7,
+   "content": [
+    {
+     "type": "p",
+     "text": "At International Championships, medals will be presented for first, second and third places for each category based upon totals. In addition, medals or merit award certificates shall be presented for first, second and third places in the individual lifts of squat, bench press and deadlift in each category. Each lifter must receive a Participation medal/memento from the Meet Organizer (By-Laws 13.3). Should a lifter fail to succeed in either or both of the squat or bench press disciplines he/she may continue to compete for the remainder of the contest, and the lifter will be eligible for awards in any discipline in which he/she records a successful lift or lifts. To receive this award the lifter must make a bona fide attempt on each of the three disciplines. Dress code for athletes at World Championships medal ceremonies is – full team track suit, t- shirt, athletic footwear. Compliance will be monitored by the Technical Controller for the session. Failure to adhere to these requirements shall disqualify the lifter from receiving the medal(s) on the platform, although their place in contest results will stand.",
+     "page": 7,
+     "sha256": "9c98a091edbee3d2b903989a3d203e0063233ec51a8b6bacd2174b1b1cb45f2c"
+    }
+   ],
+   "text": "At International Championships, medals will be presented for first, second and third places for each category based upon totals. In addition, medals or merit award certificates shall be presented for first, second and third places in the individual lifts of squat, bench press and deadlift in each category. Each lifter must receive a Participation medal/memento from the Meet Organizer (By-Laws 13.3). Should a lifter fail to succeed in either or both of the squat or bench press disciplines he/she may continue to compete for the remainder of the contest, and the lifter will be eligible for awards in any discipline in which he/she records a successful lift or lifts. To receive this award the lifter must make a bona fide attempt on each of the three disciplines. Dress code for athletes at World Championships medal ceremonies is – full team track suit, t- shirt, athletic footwear. Compliance will be monitored by the Technical Controller for the session. Failure to adhere to these requirements shall disqualify the lifter from receiving the medal(s) on the platform, although their place in contest results will stand.",
+   "sha256": "9c98a091edbee3d2b903989a3d203e0063233ec51a8b6bacd2174b1b1cb45f2c"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-14",
+   "label": "14)",
+   "label_kind": "num",
+   "page": 7,
+   "content": [
+    {
+     "type": "p",
+     "text": "It is forbidden to whip and smash the lifter in front of the audience and media.",
+     "page": 7,
+     "sha256": "2e0cce22e1f29db1b5a0f91f2f11c933be88ef3d9aadf5a28695b487e53f153f"
+    }
+   ],
+   "text": "It is forbidden to whip and smash the lifter in front of the audience and media.",
+   "sha256": "2e0cce22e1f29db1b5a0f91f2f11c933be88ef3d9aadf5a28695b487e53f153f"
+  },
+  {
+   "type": "clause",
+   "id": "tr2026.1.item-15",
+   "label": "15)",
+   "label_kind": "num",
+   "page": 7,
+   "content": [
+    {
+     "type": "p",
+     "text": "At all IPF events, the organizer must provide for the safety of athletes and officials a qualified medical person on duty throughout the championships",
+     "page": 7,
+     "sha256": "069996042eb8705f27b1f3492b66f6006cd68af50725299ddf8f361a13bc762b"
+    }
+   ],
+   "text": "At all IPF events, the organizer must provide for the safety of athletes and officials a qualified medical person on duty throughout the championships",
+   "sha256": "069996042eb8705f27b1f3492b66f6006cd68af50725299ddf8f361a13bc762b"
+  }
+ ],
+ "text": "",
+ "sha256": "4adaf4046b9d492b7276b32e680462c2db0f1a27b053696acf15f44d13a99cb1"
+}

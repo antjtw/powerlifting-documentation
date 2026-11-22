@@ -1,0 +1,102 @@
+{
+ "layout_fixes": [
+  {
+   "page": 5,
+   "start": "^MEN & WOMEN$",
+   "lines": 19
+  },
+  {
+   "page": 5,
+   "start": "^MEN WOMEN$",
+   "lines": 14
+  },
+  {
+   "page": 8,
+   "start": "^IPF RECOGNIZED POWERLIFTING BAR",
+   "lines": 18
+  },
+  {
+   "page": 8,
+   "start": "^Face Value in Kilos",
+   "lines": 17
+  },
+  {
+   "page": 10,
+   "start": "^SQUAT BENCH PRESS DEADLIFT$",
+   "lines": 117
+  },
+  {
+   "page": 12,
+   "start": "^CHAMPIONSHIPS SCOREBOARD$",
+   "lines": 28
+  },
+  {
+   "page": 21,
+   "start": "^The diagrams below indicate",
+   "lines": 10
+  },
+  {
+   "page": 25,
+   "start": "^SCHEMATIC REPRESENTATION",
+   "lines": 13
+  },
+  {
+   "page": 26,
+   "start": "^For each below the ankle",
+   "lines": 6
+  },
+  {
+   "page": 28,
+   "start": "^SPEAKER’S CARD$",
+   "lines": 31
+  },
+  {
+   "page": 36,
+   "start": "^LIFT COMMENCEMENT COMPLETION$",
+   "lines": 22
+  }
+ ],
+ "warnings": [
+  "p29: label (i) out of sequence, kept as text: (i), and then only at the end of a round."
+ ],
+ "struck": [
+  {
+   "page": 11,
+   "text": "Heaving,or"
+  },
+  {
+   "page": 19,
+   "text": "Referees shall also reject any knee sleeves that have been put on the lifter with the assistance of any other person or method, such as the use of plastic sliding devices, the use of lubricants etc. Socks are however permitted to put knee sleeves on. Athletes are permitted to receive personal assistance in the application of their knee sleeves."
+  },
+  {
+   "page": 20,
+   "text": "hands and fingers gripping the bar"
+  },
+  {
+   "page": 24,
+   "text": "Heaving or"
+  },
+  {
+   "page": 26,
+   "text": "his himself/herself undergarments … nude may"
+  },
+  {
+   "page": 38,
+   "text": "three"
+  },
+  {
+   "page": 39,
+   "text": "(b) Must have adjudicated at least 4 International Championships, excluding the World Bench Press Championships."
+  }
+ ],
+ "dedupe": [
+  {
+   "id": "tr2026.3.12.g-2",
+   "base": "tr2026.3.12.g"
+  },
+  {
+   "id": "tr2026.6.1.b-2",
+   "base": "tr2026.6.1.b"
+  }
+ ]
+}

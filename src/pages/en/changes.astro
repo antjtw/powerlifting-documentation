@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allClauses, units } from '../../lib/content';
+const hits = allClauses().filter((x) => x.clause.changed_2026);
+const href = (id: string, unit: any) => `/en/2026/${unit.number}/#${id.slice(unit.id.length + 1)}`;
+---
+<Base title="Changed in 2026" current="/en/changes/">
+  <div class="wrap">
+    <div class="sec-head" style="padding-top:2rem"><h1>Printed as changed in 2026</h1></div>
+    <div class="prose text-col">
+      <p>The IPF's 2026 PDF prints new or changed text in red. These clauses contain such text. This follows the PDF's own marking; it is not a full comparison with the 2025 edition, and the IPF's “Changes Explanations” document is the authority on what changed and why.</p>
+      <ul class="diff-list" style="margin-top:1.5rem">
+        {hits.map(({ clause, unit, path }) => (
+          <li>
+            <a href={href(clause.id!, unit)}>{unit.number} {path.join(' ')}</a>
+            <span style="color:var(--muted)"> · PDF p.{clause.page}</span>
+            <p style="font-size:.95rem;color:var(--muted)">{(clause.content?.[0]?.text ?? '').slice(0, 140)}…</p>
+          </li>
+        ))}
+      </ul>
+      <p>Chapter and section-level paragraphs outside numbered clauses may also contain red text; the figures here count clauses only.</p>
+    </div>
+  </div>
+</Base>

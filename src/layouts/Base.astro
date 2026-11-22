@@ -1,0 +1,64 @@
+---
+import '@fontsource-variable/montserrat';
+import '../styles/global.css';
+const { title, description = 'The IPF Technical Rules, unofficial digital edition.', current = '', lang = 'en' } = Astro.props;
+const full = title === 'powerlifting.digital' ? title : `${title} · powerlifting.digital`;
+const nav = [
+  ['/en/2026/', 'Browse'],
+  ['/en/search/', 'Search'],
+  ['/en/changes/', 'Changed in 2026'],
+  ['/en/about/', 'About'],
+];
+---
+<!doctype html>
+<html lang={lang} dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{full}</title>
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script is:inline>
+      try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/en/"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span> powerlifting.digital</a>
+        <span class="tag">Unofficial companion</span>
+        <nav aria-label="Main">
+          {nav.map(([href, label]) => <a href={href} aria-current={current === href ? 'page' : undefined}>{label}</a>)}
+          <button type="button" id="theme" aria-label="Switch between light and dark">Light / dark</button>
+        </nav>
+      </div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p><strong>Unofficial companion.</strong> powerlifting.digital is independent. It is made by Ant White, a Category 2 referee with British Powerlifting, to make the rules more accessible. It is not produced or endorsed by the IPF.</p>
+        <p>Wherever anything here contradicts the IPF's English text, the English text wins. Guidance, not a ruling: on the platform, the referees and Jury decide.</p>
+        <p>Based on the 2026 IPF Technical Rulebook, effective 01.03.2026. <a href="/en/about/">About this site</a> · <a href="/en/corrections/">Corrections</a> · <a href="/api/2026/index.json">Open data</a></p>
+      </div>
+    </footer>
+    <script is:inline>
+      document.getElementById('theme').addEventListener('click', function () {
+        var cur = document.documentElement.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+      document.addEventListener('click', function (e) {
+        var b = e.target.closest && e.target.closest('.copy');
+        if (!b) return;
+        var url = location.origin + location.pathname + '#' + b.dataset.anchor;
+        var text = b.dataset.mode === 'cite' ? b.dataset.cite + ' ' + url : url;
+        (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () {
+          var old = b.textContent; b.textContent = 'Copied'; setTimeout(function () { b.textContent = old; }, 1500);
+        }, function () { location.hash = b.dataset.anchor; });
+      });
+    </script>
+  </body>
+</html>

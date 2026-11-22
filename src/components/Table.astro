@@ -1,0 +1,21 @@
+---
+const { node, anchor } = Astro.props;
+const names: Record<string, string> = {
+  'age-categories': '1.1 Age categories', 'weight-classes': '1.2 Bodyweight categories',
+  'disc-tolerances': 'Disc weight tolerances (2.3 (b) item 1))', 'amputee-fractions': 'Additions to bodyweight for amputee lifters (5 item 5))',
+  signals: 'Referee signals for the three lifts (7 item 3))',
+};
+const caption = names[node.kind] ?? node.caption ?? 'Table';
+const rowHead = node.kind === 'age-categories' || node.kind === 'signals';
+---
+<div class="table-wrap" role="region" aria-label={caption} tabindex="0" id={anchor}>
+  <table>
+    <caption>{caption}</caption>
+    {node.header && <thead><tr>{node.header.map((h: string) => <th scope="col">{h}</th>)}</tr></thead>}
+    <tbody>
+      {node.rows.map((r: string[]) => (
+        <tr>{r.map((c, i) => (rowHead && i === 0 ? <th scope="row">{c}</th> : <td>{c}</td>))}</tr>
+      ))}
+    </tbody>
+  </table>
+</div>

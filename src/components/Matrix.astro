@@ -1,0 +1,19 @@
+---
+const { node, anchor } = Astro.props;
+const lifts = ['SQUAT', 'BENCH PRESS', 'DEADLIFT'];
+const rows = [['RED', '1.RED', 'card-r'], ['BLUE', '2.BLUE', 'card-b'], ['YELLOW', '3.YELLOW', 'card-y']];
+---
+<div class="table-wrap" role="region" aria-label="Failure cards by lift: reasons for each card" tabindex="0" id={anchor}>
+  <table>
+    <caption>2.9 Failure cards: the reasons printed for each card colour and lift</caption>
+    <thead><tr><td></td>{lifts.map((l) => <th scope="col">{l}</th>)}</tr></thead>
+    <tbody>
+      {rows.map(([k, label, cls]) => (
+        <tr class={cls}>
+          <th scope="row">{label}</th>
+          {lifts.map((l) => <td><ul>{node.matrix[k][l].map((r: string) => <li>{r}</li>)}</ul></td>)}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

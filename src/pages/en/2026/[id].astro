@@ -1,0 +1,61 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Content from '../../../components/Content.astro';
+import { units, display, crumbs, neighbours, allClauses, unitByNumber, INLINE_SECTIONS } from '../../../lib/content';
+
+export function getStaticPaths() {
+  return units.filter((u) => !INLINE_SECTIONS.has(u.number!)).map((u) => ({ params: { id: u.number }, props: { number: u.number } }));
+}
+const { number } = Astro.props;
+const unit = unitByNumber.get(number)!;
+const isChapter = unit.type === 'chapter';
+const { prev, next } = neighbours(number);
+const trail = crumbs(unit);
+const toc = (unit.content ?? []).filter((c: any) => c.type === 'clause');
+const pageNote = `PDF page${unit.page ? ' ' + unit.page : ''}`;
+const heading = display(unit.title!);
+const bodyTitle = unit.title_source === 'contents' ? 'Title taken from the contents page; the PDF body has no heading here.' : '';
+---
+<Base title={`${isChapter ? 'Chapter' : 'Rule'} ${number} ${heading}`} description={`IPF Technical Rulebook 2026, ${number} ${heading}`} current="/en/2026/">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/en/">Home</a></li>
+        <li><a href="/en/2026/">2026</a></li>
+        {trail.map((t, i) => <li>{i === trail.length - 1 ? <span aria-current="page">{t.number}</span> : <a href={`/en/2026/${t.number}/`}>{t.number}</a>}</li>)}
+      </ol>
+    </nav>
+    <div class="page rule-page">
+      <article class="text-col" data-pagefind-body data-pagefind-meta={`title:${number} ${heading}`}>
+        <header class="sec-head">
+          <span class="num">{number}</span>
+          <h1>{unit.title}</h1>
+          <p class="meta" data-pagefind-ignore>IPF Technical Rulebook 2026 · {pageNote} · English text{bodyTitle && <> · {bodyTitle}</>}</p>
+        </header>
+        <Content nodes={unit.content ?? []} unit={unit} />
+        <nav class="pn" aria-label="Previous and next">
+          {prev ? <a href={`/en/2026/${prev.number}/`} rel="prev">← {prev.number} {display(prev.title!)}</a> : <span></span>}
+          {next && <a href={`/en/2026/${next.number}/`} rel="next">{next.number} {display(next.title!)} →</a>}
+        </nav>
+      </article>
+      <aside class="rail" aria-label="Context">
+        {toc.length > 0 && (
+          <div>
+            <h2>On this page</h2>
+            <ul>{toc.map((c: any) => <li><a href={`#${c.id.slice(unit.id!.length + 1)}`}>{c.label} <span style="color:var(--muted)">{(c.content?.[0]?.text ?? '').slice(0, 42)}…</span></a></li>)}</ul>
+          </div>
+        )}
+        <div class="box">
+          <h2>Cite this</h2>
+          <p style="font-size:.9rem">IPF TR 2026, {number}</p>
+          <p style="font-size:.9rem;margin-top:.5rem">Pinned to the 2026 edition: <code style="font-size:.85rem">/en/2026/{number}/</code></p>
+          <p style="font-size:.9rem;margin-top:.5rem">Short link: <code style="font-size:.85rem">powerlifting.digital/{number}</code></p>
+        </div>
+        <div class="box">
+          <h2>About the text</h2>
+          <p style="font-size:.9rem">Rule wording is shown exactly as published in the IPF's PDF. <mark class="changed">Highlighted</mark> text was printed in red there. <a href="/en/about/">More</a></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Base>

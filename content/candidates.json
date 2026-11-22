@@ -1,0 +1,146 @@
+[
+ {
+  "id": "tr2026.3.1.singlet-non-supportive.a",
+  "kind": "mechanical",
+  "page": 14,
+  "original": "long - legged",
+  "proposed": "long-legged",
+  "note": "Spacing around a hyphen. Same pattern in 3.1 Singlet (b) and 3.8 (d).",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.3.1.singlet-non-supportive.b",
+  "kind": "mechanical",
+  "page": 14,
+  "original": "long - legged",
+  "proposed": "long-legged",
+  "note": "Spacing around a hyphen.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.3.8.d",
+  "kind": "mechanical",
+  "page": 17,
+  "original": "long - legged",
+  "proposed": "long-legged",
+  "note": "Spacing around a hyphen.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.3.14.f",
+  "kind": "mechanical",
+  "page": 20,
+  "original": "T-shrt",
+  "proposed": "T-shirt",
+  "note": "Typo. Stray capitals in the same clause: \"In the mouth\", \"If deemed\", \"Interfere\", \"require It\".",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.1.item-4",
+  "kind": "mechanical",
+  "page": 5,
+  "original": "awarded In each weight class across all age divisions..",
+  "proposed": "awarded in each weight class across all age divisions.",
+  "note": "Stray capital and doubled full stop.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.3.3.a",
+  "kind": "near-meaning",
+  "page": 15,
+  "original": "rubberized on similar stretch material",
+  "proposed": "rubberized or similar stretch material",
+  "note": "Probably \"or\" (3.2 (a) reads \"or similar stretch material\"), but it is a word change, so it needs a second reader.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.6.1.a",
+  "kind": "near-meaning",
+  "page": 27,
+  "original": "filled in were indicated",
+  "proposed": "filled in where indicated",
+  "note": "Probably \"where\". Word change, second reader.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.6.3.item-5.a",
+  "kind": "near-meaning",
+  "page": 34,
+  "original": "he lifter may accept",
+  "proposed": "the lifter may accept",
+  "note": "Probably \"the\". Word change, second reader.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.6.1.b-2",
+  "kind": "label",
+  "page": 28,
+  "original": "(b) Where 10 or more lifters",
+  "proposed": "(c) Where 10 or more lifters",
+  "note": "Two items are printed (b) in 6.1. Relabelling shifts every later label and other clauses cite labels, so every internal reference must be checked first. The printed label would be kept on record.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.6.1.m",
+  "kind": "label",
+  "page": 30,
+  "original": "the rules as stated in (m) above",
+  "proposed": "the rules as stated in (l) above",
+  "note": "(m) cites itself. (l) is the third-round deadlift rule it appears to mean. Second reader.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.6.1.e",
+  "kind": "flag-to-ipf",
+  "page": 29,
+  "original": "errors as described in item (i)",
+  "proposed": "",
+  "note": "Item (i) is the first-attempt weight change. The error rule is item (h). Not changed; report to the IPF.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.6.2.b",
+  "kind": "flag-to-ipf",
+  "page": 31,
+  "original": "advise the duty.",
+  "proposed": "",
+  "note": "6.2 (b) ends mid-sentence and (c) starts \"Referees upon procedure and any matters that require attention.\" Words appear to be missing, so this is not mechanical. Report to the IPF.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.3.8.f",
+  "kind": "flag-to-ipf",
+  "page": 17,
+  "original": "long sleeve singlet",
+  "proposed": "",
+  "note": "3.1 says \"long - legged singlet\", 3.8 (f) says \"long sleeve singlet\". They may or may not mean the same garment. Never tidied to match; report to the IPF.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.2.9.matrix1",
+  "kind": "flag-to-ipf",
+  "page": 11,
+  "original": "Failure to stand erect",
+  "proposed": "",
+  "note": "The card table's deadlift red cell reads \"Failure to stand erect\"; 4.3.1 item 2) reads \"Failure to stand erect with the shoulders back.\" Report to the IPF.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.4.1.1",
+  "kind": "contents",
+  "page": 21,
+  "original": "Causes of disqualification",
+  "proposed": "Causes for disqualification",
+  "note": "The contents page says \"of\", the body says \"for\" (4.1.1, 4.2.1, 4.3.1). The site uses the body wording.",
+  "status": "proposed"
+ },
+ {
+  "id": "tr2026.6.3.item-1",
+  "kind": "same-content",
+  "page": 32,
+  "original": "",
+  "proposed": "",
+  "note": "The coach-count lists appear in 6.3 item 1) and again in chapter 10 item 3). To be shown once, linked from both places (relationship, not a text change).",
+  "status": "proposed"
+ }
+]

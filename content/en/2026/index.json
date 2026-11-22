@@ -1,0 +1,87 @@
+{
+ "edition": "2026",
+ "effective": "2026-03-01",
+ "source": "2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf",
+ "chapters": [
+  {
+   "number": "1",
+   "id": "tr2026.1",
+   "title": "GENERAL RULES OF POWERLIFTING",
+   "toc_title": "GENERAL RULES OF POWERLIFTING",
+   "file": "ch-01.json",
+   "page": 4
+  },
+  {
+   "number": "2",
+   "id": "tr2026.2",
+   "title": "EQUIPMENT AND SPECIFICATIONS",
+   "toc_title": "EQUIPMENT AND SPECIFICATIONS",
+   "file": "ch-02.json",
+   "page": 7
+  },
+  {
+   "number": "3",
+   "id": "tr2026.3",
+   "title": "PERSONAL EQUIPMENT",
+   "toc_title": "PERSONAL EQUIPMENT",
+   "file": "ch-03.json",
+   "page": 13
+  },
+  {
+   "number": "4",
+   "id": "tr2026.4",
+   "title": "POWERLIFTING AND RULES OF PERFORMANCE",
+   "toc_title": "POWERLIFTING AND RULES OF PERFORMANCE",
+   "file": "ch-04.json",
+   "page": 20
+  },
+  {
+   "number": "5",
+   "id": "tr2026.5",
+   "title": "WEIGHING IN",
+   "toc_title": "WEIGHING IN",
+   "file": "ch-05.json",
+   "page": 26
+  },
+  {
+   "number": "6",
+   "id": "tr2026.6",
+   "title": "ORDER OF COMPETITION",
+   "toc_title": "ORDER OF COMPETITION",
+   "file": "ch-06.json",
+   "page": 27
+  },
+  {
+   "number": "7",
+   "id": "tr2026.7",
+   "title": "REFEREES",
+   "toc_title": "REFEREES",
+   "file": "ch-07.json",
+   "page": 36
+  },
+  {
+   "number": "8",
+   "id": "tr2026.8",
+   "title": "JURY AND TECHNICAL COMMITTEE",
+   "toc_title": "JURY AND TECHNICAL COMMITTEE",
+   "file": "ch-08.json",
+   "page": 41
+  },
+  {
+   "number": "9",
+   "id": "tr2026.9",
+   "title": "WORLD AND INTERNATIONAL RECORDS",
+   "toc_title": "WORLD AND INTERNATIONAL RECORDS",
+   "file": "ch-09.json",
+   "page": 42
+  },
+  {
+   "number": "10",
+   "id": "tr2026.10",
+   "title": "COACH RESPONSIBILITIES",
+   "toc_title": "COACH RESPONSIBILITIES",
+   "file": "ch-10.json",
+   "page": 44
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "powerlifting-digital",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Unofficial digital edition of the IPF Technical Rulebook",
+  "scripts": {
+    "extract": "python3 -I tools/extract.py",
+    "coverage": "python3 -I tools/coverage.py",
+    "verify": "node tools/verify.mjs",
+    "dev": "astro dev",
+    "build": "node tools/verify.mjs && astro build && pagefind --site dist",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/montserrat": "^5.3.0",
+    "astro": "^5.18.2",
+    "pagefind": "^1.6.0"
+  }
+}

@@ -1,0 +1,11 @@
+---
+const { node, anchor } = Astro.props;
+const lead = node.kind === 'yes-no' ? 'Yes / No example photographs' : node.kind === 'photo' ? 'Photograph' : 'Figure';
+---
+<figure class="placeholder" id={anchor}>
+  <figcaption>{node.caption ?? lead}</figcaption>
+  <p>{lead} on page {node.pdf_page ?? node.page} of the IPF PDF. Not reproduced here yet: it is being redrawn or re-sourced, with alt text, once image rights are confirmed.</p>
+  {node.note && <p>{node.note}</p>}
+  {node.legend && <ul>{node.legend.map((l: string) => <li>{l}</li>)}</ul>}
+  {node.labels && node.kind !== 'yes-no' && <details><summary>Printed labels</summary><ul>{node.labels.map((l: string) => <li>{l}</li>)}</ul></details>}
+</figure>

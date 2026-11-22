@@ -1,0 +1,21 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { chapters, display, units } from '../../../lib/content';
+const secs = (c: any) => units.filter((u) => u.parent?.number === c.number && u.depth === 1);
+---
+<Base title="Contents, 2026 edition" current="/en/2026/">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li>2026 edition</li></ol></nav>
+    <div class="sec-head"><h1>IPF Technical Rulebook 2026</h1><p class="meta">Effective 1 March 2026 · English text · unofficial digital edition</p></div>
+    <ol class="prose" style="list-style:none">
+      {chapters.map((c) => (
+        <li style="margin-block:1.25rem">
+          <h2 style="font-size:1.3rem"><a href={`/en/2026/${c.number}/`}>{c.number}. {display(c.toc_title ?? c.title!)}</a></h2>
+          <ul style="list-style:none;margin:.4rem 0 0 1.5rem;display:grid;gap:.15rem">
+            {secs(c).map((s) => <li><a href={`/en/2026/${s.number}/`}>{s.number}. {display(s.toc_title ?? s.title!)}</a>{units.filter((u) => u.parent?.number === s.number).map((x) => <>{' '}· <a href={`/en/2026/${x.number}/`}>{x.number}</a></>)}</li>)}
+          </ul>
+        </li>
+      ))}
+    </ol>
+  </div>
+</Base>

@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Search" current="/en/search/">
+  <div class="wrap">
+    <div class="sec-head" style="padding-top:2rem"><h1>Search the rulebook</h1></div>
+    <form class="searchbox" action="/en/search/" method="get" role="search" id="form">
+      <label class="vh" for="q">Search words, or a rule number such as 4.2.1</label>
+      <input id="q" name="q" type="search" placeholder="Words, or a rule number like 4.2.1" autocomplete="off" />
+      <button class="btn" type="submit">Search</button>
+    </form>
+    <p id="status" role="status" style="margin-top:1rem;color:var(--muted)"></p>
+    <ol id="results" class="results"></ol>
+    <noscript><p class="notice">Search needs JavaScript. Without it, use the <a href="/en/2026/">contents</a>, or type a rule number straight into the address bar: <code>powerlifting.digital/4.2.1</code>.</p></noscript>
+  </div>
+  <script is:inline>
+    (function () {
+      var input = document.getElementById('q'), out = document.getElementById('results'), status = document.getElementById('status');
+      var pf, timer;
+      var q0 = new URLSearchParams(location.search).get('q');
+      function jump(v) { var m = v.trim().match(/^\d{1,2}(\.\d{1,2}){0,2}$/); if (m) { location.href = '/en/2026/' + v.trim() + '/'; return true; } return false; }
+      async function run(v) {
+        if (!v.trim()) { out.innerHTML = ''; status.textContent = ''; return; }
+        try { pf = pf || await import('/pagefind/pagefind.js'); } catch (e) { status.textContent = 'Search index is not available in this build. Use the contents instead.'; return; }
+        var r = await pf.search(v);
+        var data = await Promise.all(r.results.slice(0, 20).map(function (x) { return x.data(); }));
+        status.textContent = data.length ? r.results.length + ' page' + (r.results.length === 1 ? '' : 's') + ' match' : 'No rules match. Try fewer or different words.';
+        out.innerHTML = data.map(function (d) { return '<li><a href="' + d.url + '">' + (d.meta.title || d.url) + '</a><p>' + d.excerpt + '</p></li>'; }).join('');
+      }
+      input.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { run(input.value); }, 120); });
+      document.getElementById('form').addEventListener('submit', function (e) { if (jump(input.value)) e.preventDefault(); });
+      if (q0) { input.value = q0; if (!jump(q0)) run(q0); }
+    })();
+  </script>
+</Base>

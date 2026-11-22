@@ -1,0 +1,77 @@
+---
+import { markup, INLINE_SECTIONS, display, type Node } from '../lib/content';
+import Content from './Content.astro';
+import Table from './Table.astro';
+import Figure from './Figure.astro';
+import Matrix from './Matrix.astro';
+
+interface Props { nodes: Node[]; unit: { id?: string; number?: string }; path?: string[]; }
+const { nodes, unit, path = [] } = Astro.props as Props;
+
+const anchorOf = (id: string) => (id.startsWith(unit.id + '.') ? id.slice(unit.id!.length + 1) : id);
+type Item = { kind: 'list'; tag: 'li' | 'line'; items: Node[] } | { kind: 'node'; node: Node } | { kind: 'cards'; items: Node[] };
+const items: Item[] = [];
+for (const n of nodes) {
+  const last = items[items.length - 1];
+  if (n.type === 'li' || n.type === 'line') {
+    if (last?.kind === 'list' && last.tag === n.type) last.items.push(n);
+    else items.push({ kind: 'list', tag: n.type as 'li' | 'line', items: [n] });
+  } else if (n.type === 'section' && !INLINE_SECTIONS.has(n.number!)) {
+    if (last?.kind === 'cards') last.items.push(n);
+    else items.push({ kind: 'cards', items: [n] });
+  } else items.push({ kind: 'node', node: n });
+}
+const cite = (labels: string[]) => `IPF TR 2026, ${unit.number} ${labels.join(' ')}`.trim();
+---
+{items.map((it) => {
+  if (it.kind === 'list') {
+    return <ul class={it.tag === 'line' ? 'lines' : undefined}>{it.items.map((n) => <li set:html={markup(n.text!, n.changed)} />)}</ul>;
+  }
+  if (it.kind === 'cards') {
+    return <ul class="cards">{it.items.map((s) => <li><a href={`/en/2026/${s.number}/`}><span class="n">{s.number}</span><span class="t">{display(s.title!)}</span></a></li>)}</ul>;
+  }
+  const n = it.node;
+  if (n.type === 'p') return <p id={n.id ? anchorOf(n.id) : undefined} set:html={markup(n.text!, n.changed)} />;
+  if (n.type === 'clause') {
+    const labels = [...path, n.label!];
+    const kids = n.content ?? [];
+    const first = kids[0]?.type === 'p' ? kids[0] : undefined;
+    const rest = first ? kids.slice(1) : kids;
+    const a = anchorOf(n.id!);
+    return (
+      <article class="clause" id={a} data-id={n.id}>
+        <span class="label">{n.label}</span>
+        <div class="body prose">
+          {first && <p set:html={markup(first.text!, first.changed)} />}
+          <Content nodes={rest} unit={unit} path={labels} />
+          <div class="tools">
+            <button class="copy" type="button" data-anchor={a} data-cite={cite(labels)} data-mode="link" aria-label={`Copy link to ${cite(labels)}`}>Copy link</button>
+            <button class="copy" type="button" data-anchor={a} data-cite={cite(labels)} data-mode="cite" aria-label={`Copy citation for ${cite(labels)}`}>Copy citation</button>
+            {n.changed_2026 && <span class="chip" title="Printed in red in the PDF">Changed in 2026</span>}
+          </div>
+        </div>
+      </article>
+    );
+  }
+  if (n.type === 'group') {
+    return (
+      <section class="group" id={anchorOf(n.id!)} aria-label={n.title ?? 'List'}>
+        {n.title && <h2>{n.title}</h2>}
+        {n.lead && <p class="loose">{n.lead}</p>}
+        <Content nodes={n.content ?? []} unit={unit} path={[...path, ...(n.title ? [n.title] : [])]} />
+      </section>
+    );
+  }
+  if (n.type === 'section') {
+    return (
+      <section class="inline-section" id={`s-${n.number}`}>
+        <h2><a href={`/en/2026/${n.number}/`}>{n.number}. {display(n.title!)}</a></h2>
+        <Content nodes={n.content ?? []} unit={unit} path={path} />
+      </section>
+    );
+  }
+  if (n.type === 'table') return <Table node={n} anchor={anchorOf(n.id!)} />;
+  if (n.type === 'figure') return <Figure node={n} anchor={anchorOf(n.id!)} />;
+  if (n.type === 'failure-matrix') return <Matrix node={n} anchor={anchorOf(n.id!)} />;
+  return null;
+})}

@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import { corrections, candidates } from '../../lib/content';
+const kinds: Record<string, string> = {
+  mechanical: 'Mechanical fix proposed', 'near-meaning': 'Near the meaning line', label: 'Relabelling', 'flag-to-ipf': 'Flag to the IPF, no change',
+  contents: 'Contents mismatch', 'same-content': 'Duplicate content',
+};
+const href = (id: string) => {
+  const m = id.match(/^tr2026\.(\d+(?:\.\d+){0,2})\.(.+)$/);
+  return m ? `/en/2026/${m[1]}/#${m[2]}` : '/en/2026/';
+};
+---
+<Base title="Corrections log" current="/en/corrections/">
+  <div class="wrap">
+    <div class="sec-head" style="padding-top:2rem"><h1>Corrections log</h1></div>
+    <div class="prose text-col">
+      <p>The rule text is shown exactly as published. A correction is allowed only if no referee, coach or lifter could read the rule differently afterwards. Each one is logged with the original text, the corrected text, the PDF page, the reason and sign-off, and reported to the IPF for the next edition.</p>
+      <h2 style="margin-top:2rem">Applied ({corrections.length})</h2>
+      {corrections.length === 0 && <p>No corrections have been applied. All text is as published.</p>}
+      <h2 style="margin-top:2rem">Under review, not applied ({candidates.length})</h2>
+      <p>These were spotted while preparing the text. Nothing here has been changed on the site.</p>
+    </div>
+    <div class="table-wrap" role="region" aria-label="Candidate corrections" tabindex="0">
+      <table>
+        <caption>Candidates for review</caption>
+        <thead><tr><th scope="col">Where</th><th scope="col">Kind</th><th scope="col">As printed</th><th scope="col">Proposed</th><th scope="col">Note</th></tr></thead>
+        <tbody>
+          {candidates.map((c) => (
+            <tr>
+              <td><a href={href(c.id)}>{c.id.replace('tr2026.', '')}</a><br />PDF p.{c.page}</td>
+              <td>{kinds[c.kind] ?? c.kind}</td>
+              <td>{c.original}</td>
+              <td>{c.proposed || '–'}</td>
+              <td>{c.note}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</Base>

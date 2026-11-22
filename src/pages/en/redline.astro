@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import { struck } from '../../lib/content';
+---
+<Base title="Text omitted as struck through" current="/en/about/">
+  <div class="wrap">
+    <div class="sec-head" style="padding-top:2rem"><h1>Text omitted from the rules</h1></div>
+    <div class="prose text-col">
+      <p>The IPF's 2026 PDF shows deletions as struck-through text. Deleted text is not part of the 2026 rules, so it is not shown on the rule pages. Every place where this happened is listed here so the omission can be checked against the PDF. “…” separates deletions that sit apart on the same line.</p>
+      <ol style="margin-top:1.5rem;display:grid;gap:1rem;margin-inline-start:1.25rem">
+        {struck.map((s) => <li><strong>PDF page {s.page}</strong><br /><del>{s.text}</del></li>)}
+      </ol>
+    </div>
+  </div>
+</Base>

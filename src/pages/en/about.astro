@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import { struck } from '../../lib/content';
+---
+<Base title="About this site" current="/en/about/">
+  <div class="wrap">
+    <div class="sec-head" style="padding-top:2rem"><h1>About this site</h1></div>
+    <div class="prose text-col">
+      <p><strong>powerlifting.digital</strong> is an unofficial, independent companion to the IPF Technical Rulebook, made by Ant White, a Category 2 referee with British Powerlifting, to make the rules more accessible. It is not produced or endorsed by the IPF. Wherever anything on the site contradicts the IPF's English text, the English text wins.</p>
+      <h2 style="margin-top:2rem">How the rule text is treated</h2>
+      <ul>
+        <li><strong>The meaning is sacred.</strong> Rule wording is shown exactly as it is published, however awkward. Only line wraps are joined.</li>
+        <li><strong>One rule, one address.</strong> Every rule, sub-rule, table and figure can be linked. Pages are pinned to the 2026 edition, so a citation always lands on the text in force.</li>
+        <li><strong>Corrections are logged.</strong> A mechanical fix (a typo, a broken label) is only made through the <a href="/en/corrections/">corrections log</a>, and every text unit carries a checksum that the build verifies. So far no corrections have been applied.</li>
+      </ul>
+      <h2 style="margin-top:2rem">The PDF is a marked-up copy</h2>
+      <p>The published 2026 PDF shows the changes from the previous edition: new text is printed in red, and deleted text is struck through. This site follows that marking:</p>
+      <ul>
+        <li>Struck-through text is <strong>not</strong> part of the 2026 rule text, so it is left out. Every omitted passage is listed on the <a href="/en/redline/">omitted text</a> page ({struck.length} places).</li>
+        <li>Text printed in red is part of the 2026 text. It is highlighted, and the <a href="/en/changes/">changes page</a> lists the affected clauses.</li>
+      </ul>
+      <h2 style="margin-top:2rem">What is here so far</h2>
+      <p>This is phase 1 of the project: the English rule pages with stable addresses, keyword search, print styles and open data. Figures and photographs are shown as labelled placeholders until they have been redrawn or re-sourced. Plain-language answers (Ask), Welsh and Japanese translations, calculators and offline use come later.</p>
+      <p>The structured rules are also published as <a href="/api/2026/index.json">open data</a> and an <a href="/llms.txt">llms.txt</a>.</p>
+    </div>
+  </div>
+</Base>
