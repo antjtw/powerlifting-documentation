@@ -1,0 +1,41 @@
+[
+ {"slug":"kit-check","title":"Getting kit-checked","who":"Lifters","intro":"What happens at equipment inspection, and what is not allowed on the body or the bar.",
+  "steps":[
+   {"signpost":"When and who inspects"},
+   {"id":"tr2026.3.12.a"},{"id":"tr2026.3.12.b"},
+   {"signpost":"What gets rejected"},
+   {"id":"tr2026.3.12.c"},{"id":"tr2026.3.12.d"},{"id":"tr2026.3.12.g"},
+   {"signpost":"After inspection"},
+   {"id":"tr2026.3.12.e"},{"id":"tr2026.3.12.f"},{"id":"tr2026.3.12.h"},
+   {"signpost":"Substances and accessories"},
+   {"id":"tr2026.3.14.a"},{"id":"tr2026.3.14.b"},{"id":"tr2026.3.14.c"},{"id":"tr2026.3.14.f"}]},
+ {"slug":"first-meet","title":"Your first meet","who":"Lifters and coaches","intro":"Weigh-in, your first attempts, and what is expected of you on the day.",
+  "steps":[
+   {"signpost":"Weigh-in"},
+   {"id":"tr2026.5.item-1"},{"id":"tr2026.5.item-3"},{"id":"tr2026.5.item-4"},{"id":"tr2026.5.item-8"},
+   {"signpost":"Attempt cards"},
+   {"id":"tr2026.6.1.a"},{"id":"tr2026.6.1.c"},
+   {"signpost":"On the platform"},
+   {"id":"tr2026.6.3.item-6"},{"id":"tr2026.6.3.item-8"},{"id":"tr2026.6.3.item-9"}]},
+ {"slug":"attempts-and-the-clock","title":"Attempts and the clock","who":"Coaches and lifters","intro":"How attempts are chosen, changed and timed.",
+  "steps":[
+   {"signpost":"Choosing weights"},
+   {"id":"tr2026.6.1.a"},{"id":"tr2026.6.1.f"},{"id":"tr2026.6.3.item-4"},
+   {"signpost":"Changes and deadlines"},
+   {"id":"tr2026.6.1.i"},{"id":"tr2026.6.1.j"},{"id":"tr2026.6.1.k"},{"id":"tr2026.6.1.l"},
+   {"signpost":"Time allowances"},
+   {"id":"tr2026.6.1.d"},{"id":"tr2026.6.2.d"}]},
+ {"slug":"refereeing-the-bench","title":"Refereeing the bench","who":"Referees","intro":"Set-up, signals, and the causes for disqualification of a bench press.",
+  "steps":[
+   {"signpost":"Set-up and signals"},
+   {"id":"tr2026.4.2.item-2"},{"id":"tr2026.4.2.item-6"},{"id":"tr2026.4.2.item-7"},{"id":"tr2026.4.2.item-8"},
+   {"signpost":"Causes for disqualification"},
+   {"id":"tr2026.4.2.1"}]},
+ {"slug":"running-a-platform","title":"Running a platform","who":"Meet directors and volunteers","intro":"Platform, bar, discs, collars, racks and bench.",
+  "steps":[
+   {"signpost":"Platform"},{"id":"tr2026.2.2"},
+   {"signpost":"Bar and discs"},
+   {"id":"tr2026.2.3.a"},{"id":"tr2026.2.3.b.item-1"},{"id":"tr2026.2.3.b.item-6"},{"id":"tr2026.2.3.b.item-7"},
+   {"signpost":"Collars, racks, bench"},
+   {"id":"tr2026.2.4"},{"id":"tr2026.2.5.item-2"},{"id":"tr2026.2.6"}]}
+]

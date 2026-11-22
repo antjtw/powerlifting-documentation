@@ -1,0 +1,39 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { paths, byId, hrefOf, labelOf, markup } from '../../../lib/content';
+export function getStaticPaths() { return paths.map((p) => ({ params: { slug: p.slug }, props: { p } })); }
+const { p } = Astro.props;
+const total = p.steps.filter((s: any) => s.id).length;
+let n = 0;
+const body = (node: any) => (node.content ?? []).filter((c: any) => ['p', 'li', 'line'].includes(c.type));
+---
+<Base title={p.title} current="/en/paths/">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/paths/">Paths</a></li><li>{p.title}</li></ol></nav>
+    <div class="sec-head" style="padding-top:1.5rem"><h1>{p.title}</h1><p class="meta">For {p.who.toLowerCase()} · {total} rules · {p.intro}</p></div>
+    <div class="notice"><p><strong>Signposts are not rules.</strong> Labelled “Signpost” lines are this site's own pointers. Everything in a quotation is the IPF's wording, shown as published.</p></div>
+    <ol class="path" style="list-style:none">
+      {p.steps.map((s: any) => {
+        if (s.signpost) return <li class="sign"><span class="chip" style="background:transparent">Signpost</span> {s.signpost}</li>;
+        const hit = byId.get(s.id); if (!hit) return null; n++;
+        const node = hit.node;
+        return (
+          <li class="step">
+            <p class="stephead"><span class="stepn">{n} of {total}</span> <a href={hrefOf(s.id)}>{labelOf(s.id)}</a></p>
+            <blockquote cite={hrefOf(s.id)}>
+              {node.type === 'section' && <p><strong>{node.title}</strong></p>}
+              {body(node).map((c: any) => <p set:html={markup(c.text, c.changed)} />)}
+            </blockquote>
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+  <style>
+    .path { max-inline-size: var(--measure); display: grid; gap: 1.25rem; margin-block: 1.5rem; }
+    .sign { font-weight: 800; font-size: 1.15rem; margin-top: 1rem; border-top: 3px solid var(--accent); padding-top: .75rem; }
+    .stephead { font-size: .9rem; color: var(--muted); margin-bottom: .35rem; }
+    .stepn { font-weight: 800; color: var(--accent); margin-inline-end: .5rem; }
+    blockquote { margin: 0; padding-inline-start: 1rem; border-inline-start: 4px solid var(--rule); display: grid; gap: .6rem; }
+  </style>
+</Base>

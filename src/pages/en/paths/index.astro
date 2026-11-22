@@ -1,0 +1,12 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { paths } from '../../../lib/content';
+---
+<Base title="Paths" current="/en/paths/">
+  <div class="wrap">
+    <div class="sec-head" style="padding-top:2rem"><h1>Paths</h1><p class="meta">Task-based reading lists. Each is an ordered set of rules quoted verbatim, with short signposts between them.</p></div>
+    <ul class="cards">
+      {paths.map((p) => <li><a href={`/en/paths/${p.slug}/`}><span class="t">{p.title}</span><span class="s">{p.who}</span><span class="s">{p.intro}</span></a></li>)}
+    </ul>
+  </div>
+</Base>

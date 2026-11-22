@@ -1,0 +1,12 @@
+[
+ {"a":"tr2026.6.3.item-1","b":"tr2026.10.item-3","kind":"same content","note":"The coach-count lists appear in both places."},
+ {"a":"tr2026.5.item-5","b":"tr2026.4.2.2","kind":"refers to","note":"4.2.2 says: Refer to WEIGHING IN item 5."},
+ {"a":"tr2026.2.9","b":"tr2026.4.1.1","kind":"see also","note":"Causes for disqualification of a squat."},
+ {"a":"tr2026.2.9","b":"tr2026.4.2.1","kind":"see also","note":"Causes for disqualification of a bench press."},
+ {"a":"tr2026.2.9","b":"tr2026.4.3.1","kind":"see also","note":"Causes for disqualification of a deadlift."},
+ {"a":"tr2026.3.1.singlet-non-supportive.b","b":"tr2026.3.8.f","kind":"see also","note":"Both cover knee sleeves and the singlet. The wording differs; see the corrections log."},
+ {"a":"tr2026.6.1.e","b":"tr2026.6.1.h","kind":"see also","note":"Loading errors and extra attempts."},
+ {"a":"tr2026.6.1.h","b":"tr2026.6.3.item-5","kind":"see also","note":"Errors in loading."},
+ {"a":"tr2026.7.item-6.d","b":"tr2026.3.12","kind":"refers to","note":"Inspection of personal equipment."},
+ {"a":"tr2026.1.item-12","b":"tr2026.1.item-13","kind":"see also","note":"Awards."}
+]

@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { chapters, display } from '../../lib/content';
+import { chapters, display, paths } from '../../lib/content';
 ---
 <Base title="powerlifting.digital" current="/en/">
   <section class="hero">
@@ -23,6 +23,8 @@ import { chapters, display } from '../../lib/content';
     <ol class="big-index">
       {chapters.map((c) => <li><a href={`/en/2026/${c.number}/`}><span class="n">{c.number}</span><span class="t">{display(c.toc_title ?? c.title!)}</span></a></li>)}
     </ol>
+    <h2>Start from a task</h2>
+    <ul class="cards">{paths.map((p) => <li><a href={`/en/paths/${p.slug}/`}><span class="t">{p.title}</span><span class="s">{p.who}</span></a></li>)}</ul>
     <p>New to this? <a href="/en/about/">How the site treats the rule text</a> · <a href="/en/changes/">What is marked as changed in 2026</a></p>
   </div>
 </Base>

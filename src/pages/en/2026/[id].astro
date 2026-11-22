@@ -1,7 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import Content from '../../../components/Content.astro';
-import { units, display, crumbs, neighbours, allClauses, unitByNumber, INLINE_SECTIONS } from '../../../lib/content';
+import { relations, hrefOf, labelOf, units, display, crumbs, neighbours, allClauses, unitByNumber, INLINE_SECTIONS } from '../../../lib/content';
 
 export function getStaticPaths() {
   return units.filter((u) => !INLINE_SECTIONS.has(u.number!)).map((u) => ({ params: { id: u.number }, props: { number: u.number } }));
@@ -12,6 +12,7 @@ const isChapter = unit.type === 'chapter';
 const { prev, next } = neighbours(number);
 const trail = crumbs(unit);
 const toc = (unit.content ?? []).filter((c: any) => c.type === 'clause');
+const rel = relations.flatMap((r) => [[r.a, r.b], [r.b, r.a]].filter(([x]) => x === unit.id || x.startsWith(unit.id + '.')).map(([, y]) => ({ id: y, kind: r.kind, note: r.note }))).filter((r) => !(r.id === unit.id || r.id.startsWith(unit.id + '.')));
 const pageNote = `PDF page${unit.page ? ' ' + unit.page : ''}`;
 const heading = display(unit.title!);
 const bodyTitle = unit.title_source === 'contents' ? 'Title taken from the contents page; the PDF body has no heading here.' : '';
@@ -43,6 +44,12 @@ const bodyTitle = unit.title_source === 'contents' ? 'Title taken from the conte
           <div>
             <h2>On this page</h2>
             <ul>{toc.map((c: any) => <li><a href={`#${c.id.slice(unit.id!.length + 1)}`}>{c.label} <span style="color:var(--muted)">{(c.content?.[0]?.text ?? '').slice(0, 42)}…</span></a></li>)}</ul>
+          </div>
+        )}
+        {rel.length > 0 && (
+          <div>
+            <h2>Related rules</h2>
+            <ul>{rel.map((r) => <li><a href={hrefOf(r.id)}>{labelOf(r.id)}</a> <span style="color:var(--muted)">· {r.kind}</span></li>)}</ul>
           </div>
         )}
         <div class="box">

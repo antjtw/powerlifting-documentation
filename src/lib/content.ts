@@ -88,3 +88,32 @@ export function plainText(n: Node): string {
   const own = (n.content ?? []).filter((c) => ['p', 'li', 'line'].includes(c.type)).map((c) => c.text).join(' ');
   return own;
 }
+
+export const relations: { a: string; b: string; kind: string; note?: string }[] = JSON.parse(readFileSync(join(root, 'relations.json'), 'utf8'));
+export const paths: { slug: string; title: string; who: string; intro: string; steps: { id?: string; signpost?: string }[] }[] = JSON.parse(readFileSync(join(root, 'paths.json'), 'utf8'));
+
+/** id -> node, with its page unit. */
+export const byId = new Map<string, { node: Node; unit: Unit }>();
+(function index() {
+  const walk = (n: Node, unit: Unit) => {
+    if (n.id) byId.set(n.id, { node: n, unit });
+    (n.content ?? []).forEach((c) => walk(c, c.type === 'section' ? (unitByNumber.get(c.number!) as Unit) : unit));
+  };
+  for (const c of chapters) walk(c, unitByNumber.get(c.number!) as Unit);
+})();
+
+export function hrefOf(id: string) {
+  const hit = byId.get(id);
+  if (!hit) return '/en/2026/';
+  const { node, unit } = hit;
+  const base = INLINE_SECTIONS.has(unit.number!) ? `/en/2026/1/` : `/en/2026/${unit.number}/`;
+  return node.id === unit.id ? base : `${base}#${node.id!.slice(unit.id!.length + 1)}`;
+}
+export function labelOf(id: string) {
+  const hit = byId.get(id);
+  if (!hit) return id;
+  const { node, unit } = hit;
+  if (node.type === 'section' || node.type === 'chapter') return `${node.number} ${display(node.title!)}`;
+  const parts = id.slice(unit.id!.length + 1).split('.').map((x) => (/^item-\d+$/.test(x) ? x.slice(5) + ')' : /^[a-z]$/.test(x) ? `(${x})` : /^pt-/.test(x) ? x.slice(3) + '.' : x));
+  return `${unit.number} ${parts.join(' ')}`;
+}
