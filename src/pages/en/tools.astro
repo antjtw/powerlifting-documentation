@@ -1,0 +1,94 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Tools" current="/en/tools/" description="Calculators built from the tables in the IPF Technical Rulebook 2026.">
+  <div class="wrap">
+    <div class="sec-head" style="padding-top:2rem"><h1>Tools</h1>
+      <p class="meta">Built from the rule tables. Guidance, not a ruling: check the cited rule.</p></div>
+    <noscript><p class="notice">These calculators need JavaScript. The underlying tables are at <a href="/en/2026/1/#s-1.1">1.1 Age categories</a> and <a href="/en/2026/1/#s-1.2">1.2 Bodyweight categories</a>.</p></noscript>
+    <div class="tools-grid">
+      <section class="box" aria-labelledby="t-age">
+        <h2 id="t-age">Age category</h2>
+        <p><label for="birth">Year of birth</label> <input id="birth" type="number" inputmode="numeric" min="1900" max="2100" value="2004" /></p>
+        <p><label for="compyear">Year of competition</label> <input id="compyear" type="number" inputmode="numeric" min="1900" max="2100" value="2026" /></p>
+        <p id="age-out" role="status"></p>
+        <p class="src">Rule: <a href="/en/2026/1/#s-1.1">1.1</a>. Age is the age reached in the calendar year.</p>
+      </section>
+      <section class="box" aria-labelledby="t-wc">
+        <h2 id="t-wc">Weight class</h2>
+        <p><label for="sex">Category</label>
+          <select id="sex"><option value="m">Men</option><option value="f">Women</option></select></p>
+        <p><label><input id="jr" type="checkbox" /> Sub-Junior or Junior</label></p>
+        <p><label for="bw">Bodyweight (kg)</label> <input id="bw" type="number" step="0.01" min="0" value="82.4" /></p>
+        <p id="wc-out" role="status"></p>
+        <p class="src">Rule: <a href="/en/2026/1/#s-1.2">1.2</a>.</p>
+      </section>
+      <section class="box" aria-labelledby="t-comp">
+        <h2 id="t-comp">Compensatory time</h2>
+        <p><label for="lifters">Lifters in the group</label> <input id="lifters" type="number" min="1" max="20" value="4" /></p>
+        <p id="comp-out" role="status"></p>
+        <p class="src">Rule: <a href="/en/2026/6.1/#d">6.1 (d)</a>.</p>
+      </section>
+      <section class="box" aria-labelledby="t-load">
+        <h2 id="t-load">Plate loader</h2>
+        <p><label for="target">Bar weight (kg)</label> <input id="target" type="number" step="2.5" min="30" value="187.5" /></p>
+        <p id="load-out" role="status"></p>
+        <p class="src">Bar 25 kg, collars 2.5 kg each (<a href="/en/2026/2.3/#a">2.3 (a)</a>, <a href="/en/2026/2.4/">2.4</a>). Colours: <a href="/en/2026/2.3/#b.item-6">2.3 (b) item 6)</a>. Weight must be a multiple of 2.5 kg (<a href="/en/2026/6.3/#item-4">6.3 item 4)</a>).</p>
+      </section>
+    </div>
+  </div>
+  <style>
+    .tools-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); margin-top: 1rem; }
+    .tools-grid .box { background: var(--bg-soft); border: 1px solid var(--rule); border-radius: .7rem; padding: 1.25rem; }
+    .tools-grid h2 { font-size: 1.2rem; margin-bottom: .75rem; }
+    .tools-grid p { margin-top: .6rem; }
+    .tools-grid input[type=number], .tools-grid select { font: inherit; padding: .45rem .6rem; min-height: 44px; border: 2px solid var(--rule); border-radius: .4rem; background: var(--bg); color: var(--text); inline-size: 8rem; }
+    .tools-grid label { font-weight: 700; display: inline-block; min-width: 9rem; }
+    .tools-grid [role=status] { font-weight: 700; font-size: 1.05rem; }
+    .src { font-size: .85rem; color: var(--muted); }
+    .plate { display: inline-block; padding: .1rem .6rem; border-radius: .3rem; margin: .15rem .2rem 0 0; font-weight: 800; border: 2px solid var(--text); }
+    .p25 { background: var(--red-600); color: #fff; } .p20 { background: var(--card-blue); color: #fff; } .p15 { background: var(--card-yellow); color: var(--navy-900); }
+  </style>
+  <script is:inline>
+    (function () {
+      var $ = function (id) { return document.getElementById(id); };
+      function age() {
+        var a = +$('compyear').value - +$('birth').value, out = [];
+        if (!(a >= 0 && a < 120)) { $('age-out').textContent = 'Enter two years.'; return; }
+        if (a >= 14 && a <= 18) out.push('Sub-Junior');
+        if (a >= 19 && a <= 23) out.push('Junior');
+        if (a >= 19) out.push('Open');
+        if (a >= 40 && a <= 49) out.push('Master 1');
+        if (a >= 50 && a <= 59) out.push('Master 2');
+        if (a >= 60 && a <= 69) out.push('Master 3');
+        if (a >= 70) out.push('Master 4');
+        $('age-out').textContent = 'Age reached in the year: ' + a + '. ' + (out.length ? out.join(', ') + '.' : 'Below 14: national competitions only (1.1).');
+      }
+      var M = [59, 66, 74, 83, 93, 105, 120], F = [47, 52, 57, 63, 69, 76, 84];
+      function wc() {
+        var w = parseFloat($('bw').value), f = $('sex').value === 'f', jr = $('jr').checked;
+        if (!(w > 0)) { $('wc-out').textContent = 'Enter a bodyweight.'; return; }
+        var list = (f ? F : M).slice(); if (jr) list.unshift(f ? 43 : 53);
+        var top = list[list.length - 1], cls = null;
+        for (var i = 0; i < list.length; i++) if (w <= list[i]) { cls = list[i] + ' kg class'; break; }
+        if (!cls) cls = jr ? 'Over ' + top + ' kg: check 1.2 (the lowest class is for Sub-Junior and Junior only)' : top + '+ kg class';
+        $('wc-out').textContent = cls;
+      }
+      function comp() {
+        var n = +$('lifters').value;
+        $('comp-out').textContent = n >= 6 ? 'No compensatory time (6 or more lifters).' : n === 5 ? '1 minute added at the end of each round.' : n === 4 ? '2 minutes added at the end of each round.' : n >= 1 ? '3 minutes added (the maximum allowance).' : 'Enter a number of lifters.';
+      }
+      var D = [[25, 'p25'], [20, 'p20'], [15, 'p15'], [10, ''], [5, ''], [2.5, ''], [1.25, '']];
+      function load() {
+        var t = parseFloat($('target').value);
+        if (!(t >= 30)) { $('load-out').textContent = 'Minimum is 30 kg (bar and collars).'; return; }
+        if (Math.round(t * 100) % 250 !== 0) { $('load-out').textContent = 'Not a multiple of 2.5 kg, so not a normal attempt weight (6.3 item 4).'; return; }
+        var side = (t - 30) / 2, html = [];
+        D.forEach(function (d) { var n = Math.floor(side / d[0] + 1e-9); if (n) { html.push(' <span class="plate ' + d[1] + '">' + n + ' × ' + d[0] + '</span>'); side -= n * d[0]; } });
+        $('load-out').innerHTML = 'Each side, heaviest innermost: ' + (html.join('') || 'no discs') + ' plus 2.5 kg collar.';
+      }
+      [['birth', age], ['compyear', age], ['bw', wc], ['sex', wc], ['jr', wc], ['lifters', comp], ['target', load]].forEach(function (p) { $(p[0]).addEventListener('input', p[1]); });
+      age(); wc(); comp(); load();
+    })();
+  </script>
+</Base>
