@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Ask the Rulebook" current="/en/ask/" description="Ask a question in plain language and get an answer that quotes the exact rules.">
+  <div class="wrap">
+    <div class="sec-head" style="padding-top:2rem"><h1>Ask the Rulebook</h1>
+      <p class="meta">Answers quote the exact rules. The rules are the authority; the answer is a guide.</p></div>
+    <p class="notice"><strong>Guidance, not a ruling.</strong> On the platform, the referees and Jury decide. Questions are not tied to you; they may be reviewed to improve answers.</p>
+    <form class="searchbox" action="/en/search/" method="get" id="askform">
+      <label class="vh" for="q">Your question</label>
+      <input id="q" name="q" type="search" placeholder="Can I wear knee sleeves under a long-legged singlet?" autocomplete="off" />
+      <button class="btn" type="submit">Ask</button>
+    </form>
+    <p style="margin-top:.5rem;font-size:.9rem;color:var(--muted)">Without JavaScript, this form searches the rulebook instead.</p>
+    <div id="out" aria-live="polite" style="margin-top:1.5rem;max-inline-size:var(--measure)"></div>
+  </div>
+  <script is:inline>
+    (function () {
+      var form = document.getElementById('askform'), q = document.getElementById('q'), out = document.getElementById('out');
+      function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+      function url(id) { var m = id.match(/^tr2026\.((?:\d+\.)*\d+)(?:\.(.*))?$/); return m ? '/en/2026/' + m[1] + '/' + (m[2] ? '#' + m[2] : '') : '/en/2026/'; }
+      function fallback(v) { out.innerHTML = '<p>No verified answer is available right now. <a href="/en/search/?q=' + encodeURIComponent(v) + '">Here are the matching rules.</a></p>'; }
+      async function run(v) {
+        out.innerHTML = '<p>Looking through the rulebook…</p>';
+        try {
+          var r = await fetch('/api/ask', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ q: v }) });
+          var d = await r.json();
+          if (!d.answer) return fallback(v);
+          var a = d.answer, chip = { answered: 'Answered', partly: 'Partly covered', 'not-covered': 'Not in the Technical Rulebook' }[a.status];
+          out.innerHTML = '<p><span class="chip">' + chip + '</span></p><h2 tabindex="-1" id="ans" style="font-size:1.3rem;margin-top:.75rem">' + esc(a.short_answer) + '</h2>' +
+            (a.citations || []).map(function (c) { return '<blockquote style="margin:1rem 0;padding-inline-start:1rem;border-inline-start:4px solid var(--accent)"><p lang="en">“' + esc(c.quote) + '”</p><p><a href="' + url(c.id) + '">' + esc(c.id.replace('tr2026.', 'Rule ')) + '</a> · PDF p.' + c.page + '</p></blockquote>'; }).join('') +
+            '<p style="color:var(--muted)">' + esc(a.footer) + '</p>';
+          document.getElementById('ans').focus();
+        } catch (e) { fallback(v); }
+      }
+      form.addEventListener('submit', function (e) { if (!q.value.trim()) return; if (/^\d{1,2}(\.\d{1,2}){0,2}$/.test(q.value.trim())) { e.preventDefault(); location.href = '/en/2026/' + q.value.trim() + '/'; return; } e.preventDefault(); history.replaceState(null, '', '?q=' + encodeURIComponent(q.value)); run(q.value); });
+      var init = new URLSearchParams(location.search).get('q'); if (init) { q.value = init; run(init); }
+    })();
+  </script>
+</Base>

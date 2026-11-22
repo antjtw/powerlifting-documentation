@@ -36,3 +36,9 @@ Clause ids: `tr2026.{section}.item-N` (numbered), `.a` (lettered), `.pt-x` (A./1
 ## Ask (phase 2 skeleton)
 
 `ask/` holds the server side, not yet deployed or wired to the UI: `edition.mjs` (whole edition as one cached document), `verify.mjs` (quote must be an exact substring of the cited unit; no citation means decline), `handler.mjs` (single Claude API call, returns null to fall back to keyword search), `golden.seed.json` (30 seed questions with the clauses a correct answer must cite; drafts for international referees to extend to ~200). Run `npm run test:ask`. Still needed: calculator tool calls, rate limiting and spend cap, the Ask page, the referee-written golden set and the 95% citation gate.
+
+## Decisions made on Ant's behalf (22 Nov 2026)
+
+- **Redline reading:** keep red (inserted) text, omit struck text, list omissions publicly.
+- **Corrections:** five purely mechanical fixes applied via `content/corrections.json` (delegated sign-off, for Ant's review). Everything near the meaning line, all relabelling and all flag-to-IPF items stay as printed and are listed at `/en/corrections/`.
+- **Ask:** page at `/en/ask/` and `api/ask.mjs` (Vercel function) built; falls back to search with no key or no verified answer. Before launch: set `ANTHROPIC_API_KEY`, add shared rate limiting and a spend cap, run the golden set against the real model.
