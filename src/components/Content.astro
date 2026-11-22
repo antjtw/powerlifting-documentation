@@ -47,6 +47,7 @@ const cite = (labels: string[]) => `IPF TR 2026, ${unit.number} ${labels.join(' 
           <div class="tools">
             <button class="copy" type="button" data-anchor={a} data-cite={cite(labels)} data-mode="link" aria-label={`Copy link to ${cite(labels)}`}>Copy link</button>
             <button class="copy" type="button" data-anchor={a} data-cite={cite(labels)} data-mode="cite" aria-label={`Copy citation for ${cite(labels)}`}>Copy citation</button>
+            {n.corrections && <details class="corrected"><summary>Corrected</summary><p>Mechanical correction, logged. As printed in the PDF: {n.corrections.map((k: any) => <><q>{k.printed}</q> became <q>{k.corrected}</q>. </>)}<a href="/en/corrections/">Corrections log</a></p></details>}
             {n.changed_2026 && <span class="chip" title="Printed in red in the PDF">Changed in 2026</span>}
           </div>
         </div>

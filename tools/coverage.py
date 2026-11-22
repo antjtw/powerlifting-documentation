@@ -21,6 +21,10 @@ def tokens(text):
     return [w for w in re.split(r"\s+", text) if w]
 
 
+EXPECT_MISSING = collections.Counter()
+EXPECT_EXTRA = collections.Counter()
+
+
 def walk(node, bag):
     t = node.get("type")
     if t in ("chapter", "section") and node.get("title_source") != "contents":
@@ -49,6 +53,24 @@ def walk(node, bag):
             for lift, reasons in cols.items():
                 for r in reasons:
                     bag.update(tokens(r))
+    for k in node.get("corrections", []):
+        # extend the edit to whole whitespace-delimited words so punctuation attached to it is compared too
+        for c in node["content"]:
+            if c["type"] not in ("p", "li", "line"):
+                continue
+            t, start, seen = c["text"], 0, 0
+            while seen < k["occurrences"]:
+                i = t.find(k["corrected"], start)
+                if i < 0:
+                    break
+                a = t.rfind(" ", 0, i) + 1
+                e = t.find(" ", i + len(k["corrected"]))
+                e = len(t) if e < 0 else e
+                left, right = t[a:i], t[i + len(k["corrected"]):e]
+                EXPECT_EXTRA.update(tokens(left + k["corrected"] + right))
+                EXPECT_MISSING.update(tokens(left + k["printed"] + right))
+                start = i + len(k["corrected"])
+                seen += 1
     for c in node.get("content", []):
         walk(c, bag)
 
@@ -61,8 +83,13 @@ def main():
     json_bag = collections.Counter()
     for f in sorted(OUT.glob("ch-*.json")):
         walk(json.loads(f.read_text(encoding="utf-8")), json_bag)
-    missing = pdf_bag - json_bag
-    extra = json_bag - pdf_bag
+    # logged corrections are the only permitted differences from the PDF text
+    expected = collections.Counter(pdf_bag)
+    expected.subtract(EXPECT_MISSING)
+    expected.update(EXPECT_EXTRA)
+    keys = set(expected) | set(json_bag)
+    missing = collections.Counter({k: expected[k] - json_bag[k] for k in keys if expected[k] > json_bag[k]})
+    extra = collections.Counter({k: json_bag[k] - expected[k] for k in keys if json_bag[k] > expected[k]})
     print("missing from JSON:", sum(missing.values()), dict(missing.most_common(60)))
     print("extra in JSON:", sum(extra.values()), dict(extra.most_common(60)))
     return 1 if (missing or extra) else 0

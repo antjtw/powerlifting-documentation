@@ -16,7 +16,10 @@ const href = (id: string) => {
     <div class="prose text-col">
       <p>The rule text is shown exactly as published. A correction is allowed only if no referee, coach or lifter could read the rule differently afterwards. Each one is logged with the original text, the corrected text, the PDF page, the reason and sign-off, and reported to the IPF for the next edition.</p>
       <h2 style="margin-top:2rem">Applied ({corrections.length})</h2>
-      {corrections.length === 0 && <p>No corrections have been applied. All text is as published.</p>}
+      <p>Sign-off: delegated by Ant White, 22 November 2026, for Ant's review. Only purely mechanical fixes (spacing, typos, stray capitals, doubled punctuation) have been applied. Nothing near the meaning line has been touched.</p>
+      <ul>
+        {corrections.map((c) => <li><a href={href(c.id)}>{c.id.replace('tr2026.', '')}</a> · PDF p.{c.page} · {c.reason} {c.edits.map(([a, b]: string[]) => <><q>{a}</q> → <q>{b}</q>. </>)}</li>)}
+      </ul>
       <h2 style="margin-top:2rem">Under review, not applied ({candidates.length})</h2>
       <p>These were spotted while preparing the text. Nothing here has been changed on the site.</p>
     </div>

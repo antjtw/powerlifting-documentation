@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "id": "tr2026.3.1.singlet-non-supportive.a",
+  "page": 14,
+  "edits": [
+   [
+    "long - legged",
+    "long-legged"
+   ]
+  ],
+  "reason": "Spacing around a hyphen.",
+  "kind": "mechanical",
+  "signoff": "Delegated by Ant White to Claude, 22 Nov 2026; for Ant's review",
+  "date": "2026-11-22"
+ },
+ {
+  "id": "tr2026.3.1.singlet-non-supportive.b",
+  "page": 14,
+  "edits": [
+   [
+    "long - legged",
+    "long-legged"
+   ]
+  ],
+  "reason": "Spacing around a hyphen.",
+  "kind": "mechanical",
+  "signoff": "Delegated by Ant White to Claude, 22 Nov 2026; for Ant's review",
+  "date": "2026-11-22"
+ },
+ {
+  "id": "tr2026.3.8.d",
+  "page": 17,
+  "edits": [
+   [
+    "long - legged",
+    "long-legged"
+   ]
+  ],
+  "reason": "Spacing around a hyphen.",
+  "kind": "mechanical",
+  "signoff": "Delegated by Ant White to Claude, 22 Nov 2026; for Ant's review",
+  "date": "2026-11-22"
+ },
+ {
+  "id": "tr2026.3.14.f",
+  "page": 20,
+  "edits": [
+   [
+    "T-shrt",
+    "T-shirt"
+   ],
+   [
+    "placed In the mouth",
+    "placed in the mouth"
+   ],
+   [
+    "however, If deemed",
+    "however, if deemed"
+   ],
+   [
+    "or Interfere",
+    "or interfere"
+   ],
+   [
+    "require It to",
+    "require it to"
+   ]
+  ],
+  "reason": "Typo and stray capitals.",
+  "kind": "mechanical",
+  "signoff": "Delegated by Ant White to Claude, 22 Nov 2026; for Ant's review",
+  "date": "2026-11-22"
+ },
+ {
+  "id": "tr2026.1.item-4",
+  "page": 5,
+  "edits": [
+   [
+    "divisions..",
+    "divisions."
+   ]
+  ],
+  "reason": "Doubled full stop.",
+  "kind": "mechanical",
+  "signoff": "Delegated by Ant White to Claude, 22 Nov 2026; for Ant's review",
+  "date": "2026-11-22"
+ }
+]

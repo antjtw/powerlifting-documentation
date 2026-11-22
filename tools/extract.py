@@ -777,10 +777,15 @@ def freeze(chapters):
     for ch in chapters:
         collect_hashes(ch, acc)
     acc.pop(None, None)
+    corr = ROOT / "content" / "corrections.json"
+    corrected = {e["id"] for e in json.loads(corr.read_text(encoding="utf-8"))} if corr.exists() else set()
     if lock.exists() and "--refreeze" not in sys.argv:
         old = json.loads(lock.read_text(encoding="utf-8"))
         if old != acc:
-            diff = sorted(k for k in set(old) | set(acc) if old.get(k) != acc.get(k))
+            diff = sorted(k for k in set(old) | set(acc) if old.get(k) != acc.get(k) and k not in corrected)
+        else:
+            diff = []
+        if diff:
             print(f"ERROR: extraction differs from {lock.name} for {len(diff)} ids, e.g. {diff[:5]}. "
                   "If intended (new edition / logged correction) rerun with --refreeze.")
             sys.exit(2)
@@ -789,10 +794,46 @@ def freeze(chapters):
     print(f"froze {len(acc)} hashes to {lock.name}")
 
 
+def apply_corrections(chapters):
+    """Apply logged mechanical corrections (content/corrections.json) to clause text.
+    The printed wording is kept on the clause so the site can show it."""
+    f = ROOT / "content" / "corrections.json"
+    log = json.loads(f.read_text(encoding="utf-8")) if f.exists() else []
+    index = {}
+
+    def walk(n):
+        if n.get("id"):
+            index[n["id"]] = n
+        for c in n.get("content", []):
+            walk(c)
+    for ch in chapters:
+        walk(ch)
+    for e in log:
+        node = index[e["id"]]
+        applied = []
+        for old, new in e["edits"]:
+            count = 0
+            for c in node["content"]:
+                if c["type"] in ("p", "li", "line") and old in c["text"]:
+                    while old in c["text"]:
+                        k = c["text"].index(old)
+                        delta = len(new) - len(old)
+                        c["text"] = c["text"][:k] + new + c["text"][k + len(old):]
+                        c["changed"] = [[a + (delta if a > k else 0), b + (delta if b > k else 0)] for a, b in c.get("changed", [])] or c.get("changed")
+                        if not c["changed"]:
+                            c.pop("changed", None)
+                        count += 1
+            if not count:
+                raise SystemExit(f"correction not applicable: {e['id']} {old!r}")
+            applied.append({"printed": old, "corrected": new, "occurrences": count})
+        node["corrections"] = applied
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     lines, _ = load_lines()
     t = build(lines)
+    apply_corrections(t.chapters)
     for ch in t.chapters:
         finalise(ch)
     for old in OUT.glob("*.json"):

@@ -365,13 +365,20 @@
    "content": [
     {
      "type": "p",
-     "text": "Placing for all age groupings shall be determined by the totals of the lifters in accordance with the standard rules of lifting. Medals for 1st, 2nd, and 3rd place shall be awarded In each weight class across all age divisions..",
+     "text": "Placing for all age groupings shall be determined by the totals of the lifters in accordance with the standard rules of lifting. Medals for 1st, 2nd, and 3rd place shall be awarded In each weight class across all age divisions.",
      "page": 5,
-     "sha256": "fa568b83ece1b5232c68e380423f8d3f285e0ef1323f209627e66a8a6f7e01eb"
+     "sha256": "779c118d625b562bebf9af530b0b59cd0978aba7db6c6043fdae86d7d4f0b33a"
     }
    ],
-   "text": "Placing for all age groupings shall be determined by the totals of the lifters in accordance with the standard rules of lifting. Medals for 1st, 2nd, and 3rd place shall be awarded In each weight class across all age divisions..",
-   "sha256": "fa568b83ece1b5232c68e380423f8d3f285e0ef1323f209627e66a8a6f7e01eb"
+   "corrections": [
+    {
+     "printed": "divisions..",
+     "corrected": "divisions.",
+     "occurrences": 1
+    }
+   ],
+   "text": "Placing for all age groupings shall be determined by the totals of the lifters in accordance with the standard rules of lifting. Medals for 1st, 2nd, and 3rd place shall be awarded In each weight class across all age divisions.",
+   "sha256": "779c118d625b562bebf9af530b0b59cd0978aba7db6c6043fdae86d7d4f0b33a"
   },
   {
    "type": "section",

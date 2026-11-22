@@ -1,50 +1,5 @@
 [
  {
-  "id": "tr2026.3.1.singlet-non-supportive.a",
-  "kind": "mechanical",
-  "page": 14,
-  "original": "long - legged",
-  "proposed": "long-legged",
-  "note": "Spacing around a hyphen. Same pattern in 3.1 Singlet (b) and 3.8 (d).",
-  "status": "proposed"
- },
- {
-  "id": "tr2026.3.1.singlet-non-supportive.b",
-  "kind": "mechanical",
-  "page": 14,
-  "original": "long - legged",
-  "proposed": "long-legged",
-  "note": "Spacing around a hyphen.",
-  "status": "proposed"
- },
- {
-  "id": "tr2026.3.8.d",
-  "kind": "mechanical",
-  "page": 17,
-  "original": "long - legged",
-  "proposed": "long-legged",
-  "note": "Spacing around a hyphen.",
-  "status": "proposed"
- },
- {
-  "id": "tr2026.3.14.f",
-  "kind": "mechanical",
-  "page": 20,
-  "original": "T-shrt",
-  "proposed": "T-shirt",
-  "note": "Typo. Stray capitals in the same clause: \"In the mouth\", \"If deemed\", \"Interfere\", \"require It\".",
-  "status": "proposed"
- },
- {
-  "id": "tr2026.1.item-4",
-  "kind": "mechanical",
-  "page": 5,
-  "original": "awarded In each weight class across all age divisions..",
-  "proposed": "awarded in each weight class across all age divisions.",
-  "note": "Stray capital and doubled full stop.",
-  "status": "proposed"
- },
- {
   "id": "tr2026.3.3.a",
   "kind": "near-meaning",
   "page": 15,

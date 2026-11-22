@@ -207,13 +207,20 @@
        "content": [
         {
          "type": "p",
-         "text": "The singlet shall be one-piece and form fitting without any looseness when worn. Lifters can wear approved long - legged singlets. Whichever type of singlet a lifter wears for squat, they must wear the same singlet throughout all disciplines.",
+         "text": "The singlet shall be one-piece and form fitting without any looseness when worn. Lifters can wear approved long-legged singlets. Whichever type of singlet a lifter wears for squat, they must wear the same singlet throughout all disciplines.",
          "page": 14,
-         "sha256": "1b2466c4233dc9e26253241536d410d889807d3523e92728176f433e25942f68"
+         "sha256": "eea8e15a949f9e5659b3e381bcc15f34df44492a185954e826914b9dcef4d234"
         }
        ],
-       "text": "The singlet shall be one-piece and form fitting without any looseness when worn. Lifters can wear approved long - legged singlets. Whichever type of singlet a lifter wears for squat, they must wear the same singlet throughout all disciplines.",
-       "sha256": "1b2466c4233dc9e26253241536d410d889807d3523e92728176f433e25942f68"
+       "corrections": [
+        {
+         "printed": "long - legged",
+         "corrected": "long-legged",
+         "occurrences": 1
+        }
+       ],
+       "text": "The singlet shall be one-piece and form fitting without any looseness when worn. Lifters can wear approved long-legged singlets. Whichever type of singlet a lifter wears for squat, they must wear the same singlet throughout all disciplines.",
+       "sha256": "eea8e15a949f9e5659b3e381bcc15f34df44492a185954e826914b9dcef4d234"
       },
       {
        "type": "clause",
@@ -224,13 +231,20 @@
        "content": [
         {
          "type": "p",
-         "text": "It is permitted to wear knee sleeves over a long - legged singlet; however, knee sleeves may not be worn under the singlet. The Technical Controller must verify that no knee sleeves are worn beneath the singlet. Deadlift socks may be worn over a long - legged singlet but are not mandatory.",
+         "text": "It is permitted to wear knee sleeves over a long-legged singlet; however, knee sleeves may not be worn under the singlet. The Technical Controller must verify that no knee sleeves are worn beneath the singlet. Deadlift socks may be worn over a long-legged singlet but are not mandatory.",
          "page": 14,
-         "sha256": "dd5735ba0fc8a67cceddba34fdca37caf478c26b09c0e2d68c96707065fe11ce"
+         "sha256": "a81d14c59f9e6e37557951585c526335bb639d2da54bfa1fa93f9263f83d66f8"
         }
        ],
-       "text": "It is permitted to wear knee sleeves over a long - legged singlet; however, knee sleeves may not be worn under the singlet. The Technical Controller must verify that no knee sleeves are worn beneath the singlet. Deadlift socks may be worn over a long - legged singlet but are not mandatory.",
-       "sha256": "dd5735ba0fc8a67cceddba34fdca37caf478c26b09c0e2d68c96707065fe11ce"
+       "corrections": [
+        {
+         "printed": "long - legged",
+         "corrected": "long-legged",
+         "occurrences": 2
+        }
+       ],
+       "text": "It is permitted to wear knee sleeves over a long-legged singlet; however, knee sleeves may not be worn under the singlet. The Technical Controller must verify that no knee sleeves are worn beneath the singlet. Deadlift socks may be worn over a long-legged singlet but are not mandatory.",
+       "sha256": "a81d14c59f9e6e37557951585c526335bb639d2da54bfa1fa93f9263f83d66f8"
       },
       {
        "type": "clause",
@@ -1143,13 +1157,20 @@
      "content": [
       {
        "type": "p",
-       "text": "When worn by the lifter in competition, knee sleeves must not be in contact with the lifter’s suit (other than long - legged) or socks and must be centered over the knee joint.",
+       "text": "When worn by the lifter in competition, knee sleeves must not be in contact with the lifter’s suit (other than long-legged) or socks and must be centered over the knee joint.",
        "page": 17,
-       "sha256": "88ed8a3fd71bac9422c55e365c8f4aa0d9e2bc2c175d0d170800dbfe4e51240c"
+       "sha256": "4ce93432d53addbb4771294002d0dc1bf85bc09ce99479e0fd6a4b6df65256d2"
       }
      ],
-     "text": "When worn by the lifter in competition, knee sleeves must not be in contact with the lifter’s suit (other than long - legged) or socks and must be centered over the knee joint.",
-     "sha256": "88ed8a3fd71bac9422c55e365c8f4aa0d9e2bc2c175d0d170800dbfe4e51240c"
+     "corrections": [
+      {
+       "printed": "long - legged",
+       "corrected": "long-legged",
+       "occurrences": 1
+      }
+     ],
+     "text": "When worn by the lifter in competition, knee sleeves must not be in contact with the lifter’s suit (other than long-legged) or socks and must be centered over the knee joint.",
+     "sha256": "4ce93432d53addbb4771294002d0dc1bf85bc09ce99479e0fd6a4b6df65256d2"
     },
     {
      "type": "clause",
@@ -1637,19 +1658,46 @@
      "content": [
       {
        "type": "p",
-       "text": "Athletes are allowed to wear necklaces and similar accessories. No part of the necklace or accessory shall be placed In the mouth while on the platform. A pendant or charm may be worn either over or under the T-shrt; however, If deemed to create a safety concern or Interfere with the lift, the Referee may require It to be secured under the T-shirt or removed.",
+       "text": "Athletes are allowed to wear necklaces and similar accessories. No part of the necklace or accessory shall be placed in the mouth while on the platform. A pendant or charm may be worn either over or under the T-shirt; however, if deemed to create a safety concern or interfere with the lift, the Referee may require it to be secured under the T-shirt or removed.",
        "page": 20,
        "changed": [
         [
          0,
-         361
+         362
         ]
        ],
-       "sha256": "050014fd630a8e5f41ecbe4a55d1c5249fe303321ac5109fa52ef27985ae1563"
+       "sha256": "603066265a2ecb66f2eb3a0dd595dbfdbc09164d82c2e45dbd0f8e7e43d260c3"
       }
      ],
-     "text": "Athletes are allowed to wear necklaces and similar accessories. No part of the necklace or accessory shall be placed In the mouth while on the platform. A pendant or charm may be worn either over or under the T-shrt; however, If deemed to create a safety concern or Interfere with the lift, the Referee may require It to be secured under the T-shirt or removed.",
-     "sha256": "050014fd630a8e5f41ecbe4a55d1c5249fe303321ac5109fa52ef27985ae1563",
+     "corrections": [
+      {
+       "printed": "T-shrt",
+       "corrected": "T-shirt",
+       "occurrences": 1
+      },
+      {
+       "printed": "placed In the mouth",
+       "corrected": "placed in the mouth",
+       "occurrences": 1
+      },
+      {
+       "printed": "however, If deemed",
+       "corrected": "however, if deemed",
+       "occurrences": 1
+      },
+      {
+       "printed": "or Interfere",
+       "corrected": "or interfere",
+       "occurrences": 1
+      },
+      {
+       "printed": "require It to",
+       "corrected": "require it to",
+       "occurrences": 1
+      }
+     ],
+     "text": "Athletes are allowed to wear necklaces and similar accessories. No part of the necklace or accessory shall be placed in the mouth while on the platform. A pendant or charm may be worn either over or under the T-shirt; however, if deemed to create a safety concern or interfere with the lift, the Referee may require it to be secured under the T-shirt or removed.",
+     "sha256": "603066265a2ecb66f2eb3a0dd595dbfdbc09164d82c2e45dbd0f8e7e43d260c3",
      "changed_2026": true
     }
    ],
